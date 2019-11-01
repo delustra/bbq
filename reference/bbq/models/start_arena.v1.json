@@ -1,0 +1,96 @@
+{
+  "title": "start_arena",
+  "type": "object",
+  "properties": {
+    "arena_id": {
+      "type": "integer",
+      "description": "Battle identifier"
+    },
+    "battle_level_id": {
+      "type": "integer",
+      "description": "Level of the battle"
+    },
+    "battle_type_id": {
+      "type": "integer",
+      "description": "Type of the battle "
+    },
+    "dt": {
+      "type": "string",
+      "description": "Battle start date"
+    },
+    "start_dt": {
+      "type": "string",
+      "description": "Battle start date and time\n"
+    },
+    "duration": {
+      "type": "integer",
+      "description": "Battle duration in sec\n"
+    },
+    "game_play_type_id": {
+      "type": "integer",
+      "description": "Gameplay type"
+    },
+    "map_type_id": {
+      "type": "integer",
+      "description": "Map type identifier"
+    },
+    "is_win": {
+      "type": "boolean",
+      "description": "Is user win in this battle"
+    },
+    "spa_id": {
+      "type": "integer",
+      "description": "Account identifier"
+    },
+    "team_id": {
+      "type": "integer",
+      "description": "Team number"
+    },
+    "clan_id": {
+      "type": "integer",
+      "description": "Clan indetifier"
+    },
+    "prebattle_id": {
+      "type": "integer",
+      "description": "Platoon_id / prebattle identifier"
+    },
+    "vehicle_type_cd": {
+      "type": "integer",
+      "description": "Vehicle type compact descriptor"
+    },
+    "veh_chassis_cd": {
+      "type": "integer",
+      "description": "Chassis cd by user vehicle"
+    },
+    "veh_engine_cd": {
+      "type": "integer",
+      "description": "Engine cd by user vehicle"
+    },
+    "veh_turret_cd": {
+      "type": "integer",
+      "description": "Turret cd by user vehicle"
+    },
+    "crew_mastery": {
+      "type": "integer",
+      "description": "Level of avatar mastery on this vehicle\n"
+    },
+    "life_time": {
+      "type": "integer",
+      "description": "User life time (until kill) in arena (in seconds)\n"
+    },
+    "factor_aogas": {
+      "type": "integer",
+      "description": "Aogas factor multiplied to credits, exp, crew_exp, free_exp\n"
+    },
+    "veh_gun_cd": {
+      "type": "integer",
+      "description": "Gun cd by user vehicle\n"
+    }
+  },
+  "required": [
+    "arena_id",
+    "dt",
+    "start_dt",
+    "spa_id"
+  ]
+}
