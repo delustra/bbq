@@ -1,0 +1,37 @@
+{
+  "title": "app_session",
+  "type": "object",
+  "x-tags": [
+    "client"
+  ],
+  "properties": {
+    "app_version": {
+      "type": "string"
+    },
+    "event_name": {
+      "type": "string"
+    },
+    "msg_counter": {
+      "type": "string"
+    },
+    "platform_id": {
+      "type": "string"
+    },
+    "realm": {
+      "type": "string"
+    },
+    "spa_id": {
+      "type": "string"
+    },
+    "store_id": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "udid": {
+      "type": "string",
+      "description": "UDID - identifier created by WG"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "title": "app_launch",
+  "type": "object",
+  "x-tags": [
+    "client"
+  ],
+  "properties": {
+    "adv_id": {
+      "type": "string",
+      "example": "EBB345E9-9EDF-4F28-B58B-4A50F16C0372"
+    },
+    "app_channel": {
+      "type": "string"
+    },
+    "app_version": {
+      "type": "string",
+      "example": "6.8.0",
+      "description": ""
+    },
+    "country_by_tz": {
+      "type": "string",
+      "example": "BY",
+      "description": "Country identified by timezone\n"
+    },
+    "device_make": {
+      "type": "string",
+      "example": "Apple inc."
+    },
+    "device_model": {
+      "type": "string",
+      "example": "iPad 3 GSM LTE"
+    },
+    "event_name": {
+      "type": "string",
+      "example": "app_launch"
+    },
+    "msg_counter": {
+      "type": "string",
+      "example": "0"
+    },
+    "os": {
+      "type": "string",
+      "example": "iOS"
+    },
+    "os_version": {
+      "type": "string",
+      "example": "9.3.5"
+    },
+    "platform_id": {
+      "type": "string",
+      "example": "1"
+    },
+    "store_id": {
+      "type": "string",
+      "example": "0"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2020-01-08T15:24:27Z"
+    },
+    "udid": {
+      "type": "string",
+      "example": "035D2356-E8F4-41B8-893D-A9E80BBBA26C"
+    }
+  }
+}
