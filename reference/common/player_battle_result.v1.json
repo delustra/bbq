@@ -1,0 +1,9 @@
+{
+  "title": "player_battle_result",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    }
+  }
+}

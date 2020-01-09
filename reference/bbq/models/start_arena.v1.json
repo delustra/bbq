@@ -1,7 +1,7 @@
 {
   "title": "start_arena",
   "type": "object",
-  "description": "",
+  "description": "WIP: Work in Progress",
   "properties": {
     "veh_gun_cd": {
       "type": "integer",
@@ -89,5 +89,8 @@
     "start_dt",
     "dt",
     "arena_id"
+  ],
+  "x-tags": [
+    "wip"
   ]
 }

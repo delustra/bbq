@@ -1,0 +1,10 @@
+{
+  "title": "arena_result",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    }
+  },
+  "description": "WIP: Work in Progress\nThis event is sent when the battle is over"
+}
