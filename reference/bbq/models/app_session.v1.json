@@ -33,5 +33,18 @@
       "type": "string",
       "description": "UDID - identifier created by WG"
     }
+  },
+  "x-examples": {
+    "Example 1": {
+      "app_version": "6.8.0",
+      "event_name": "app_session",
+      "msg_counter": 1,
+      "platform_id": 1,
+      "realm": "us",
+      "spa_id": "552595",
+      "store_id": 0,
+      "timestamp": "2020-01-08T15:39:59Z",
+      "udid": "D3DD34A5-6789-4D9E-B314-EA8A64BD1D84"
+    }
   }
 }

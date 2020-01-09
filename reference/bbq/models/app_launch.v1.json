@@ -63,5 +63,24 @@
       "type": "string",
       "example": "035D2356-E8F4-41B8-893D-A9E80BBBA26C"
     }
+  },
+  "description": "Event sent with the launch of WoTB for the first time.",
+  "x-examples": {
+    "Example 1": {
+      "adv_id": "EBB345E9-9EDF-4F28-B58B-4A50F16C0372",
+      "app_channel": "",
+      "app_version": "6.8.0",
+      "country_by_tz": "BY",
+      "device_make": "Apple inc.",
+      "device_model": "iPad 3 GSM LTE",
+      "event_name": "app_launch",
+      "msg_counter": 0,
+      "os": "iOS",
+      "os_version": "9.3.5",
+      "platform_id": 1,
+      "store_id": 0,
+      "timestamp": "2020-01-08T15:24:27Z",
+      "udid": "035D2356-E8F4-41B8-893D-A9E80BBBA26C"
+    }
   }
 }
