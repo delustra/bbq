@@ -1,10 +1,53 @@
 {
   "title": "arena_result",
   "type": "object",
+  "description": "WIP: Work in Progress\nThis event is sent when the battle is over",
   "properties": {
-    "id": {
+    "ts": {
+      "type": "string"
+    },
+    "arena_id": {
+      "type": "string"
+    },
+    "battle_level_id": {
+      "type": "string"
+    },
+    "battle_type_id": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "fog_of_war_mask": {
+      "type": "string",
+      "description": "??"
+    },
+    "game_play_type_id": {
+      "type": "string"
+    },
+    "logging_type_id": {
+      "type": "string"
+    },
+    "mm_type_id": {
+      "type": "string"
+    },
+    "periphery_id": {
+      "type": "string"
+    },
+    "vehicle_lock_mode_id": {
+      "type": "string"
+    },
+    "web_emitter_id": {
+      "type": "string"
+    },
+    "web_id": {
+      "type": "string"
+    },
+    "win_type_id": {
+      "type": "string"
+    },
+    "": {
       "type": "string"
     }
-  },
-  "description": "WIP: Work in Progress\nThis event is sent when the battle is over"
+  }
 }

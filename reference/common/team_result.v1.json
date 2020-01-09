@@ -1,0 +1,20 @@
+{
+  "title": "team_result",
+  "type": "object",
+  "properties": {
+    "team_respawn": {
+      "type": "string",
+      "description": "Where the team respawned\n"
+    },
+    "is_win": {
+      "type": "boolean",
+      "description": "1 - Win, 0 - Loose"
+    },
+    "members": {
+      "type": "array",
+      "items": {
+        "$ref": "./player_battle_result.v1.json"
+      }
+    }
+  }
+}

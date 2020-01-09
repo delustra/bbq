@@ -4,4 +4,9 @@ tags: [client]
 
 # Client Logs
 
-The beginning of an awesome article...
+-------
+Client Logs are:
+
+
+* app_client
+* app_session
