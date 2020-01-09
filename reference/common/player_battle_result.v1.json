@@ -5,11 +5,14 @@
     "spa_id": {
       "type": "string"
     },
-    "": {
+    "achievements": {
       "type": "array",
       "items": {
         "$ref": "./player_battle_achievement.v1.json"
       }
+    },
+    "vehicles": {
+      "type": "string"
     }
   }
 }

@@ -1,0 +1,9 @@
+{
+  "title": "battle_vehicle",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    }
+  }
+}
