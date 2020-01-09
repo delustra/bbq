@@ -1,0 +1,9 @@
+{
+  "title": "battle_ribbon",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    }
+  }
+}
