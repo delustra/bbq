@@ -12,6 +12,8 @@
     },
     "members": {
       "type": "array",
+      "maxItems": 7,
+      "minItems": 7,
       "items": {
         "$ref": "./player_battle_result.v1.json"
       }

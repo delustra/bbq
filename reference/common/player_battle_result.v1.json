@@ -2,8 +2,14 @@
   "title": "player_battle_result",
   "type": "object",
   "properties": {
-    "id": {
+    "spa_id": {
       "type": "string"
+    },
+    "": {
+      "type": "array",
+      "items": {
+        "$ref": "./player_battle_achievement.v1.json"
+      }
     }
   }
 }

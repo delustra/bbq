@@ -20,7 +20,7 @@
     },
     "fog_of_war_mask": {
       "type": "string",
-      "description": "??"
+      "description": "Different types of visibility/fog of war"
     },
     "game_play_type_id": {
       "type": "string"
@@ -46,8 +46,12 @@
     "win_type_id": {
       "type": "string"
     },
-    "": {
-      "type": "string"
+    "teams": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "$ref": "../../common/team_result.v1.json"
+      }
     }
   }
 }

@@ -1,0 +1,12 @@
+{
+  "title": "player_battle_achievement",
+  "type": "object",
+  "properties": {
+    "achievemnt_type_id": {
+      "type": "string"
+    },
+    "achievement_value": {
+      "type": "string"
+    }
+  }
+}
