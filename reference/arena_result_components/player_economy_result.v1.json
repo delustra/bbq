@@ -1,0 +1,126 @@
+{
+  "title": "player_economy_result",
+  "type": "object",
+  "x-examples": {
+    "example-1": {}
+  },
+  "properties": {
+    "credits": {
+      "type": "number"
+    },
+    "credits_enriched": {
+      "type": "number"
+    },
+    "credits_efforts": {
+      "type": "number"
+    },
+    "credits_multiplier": {
+      "type": "number"
+    },
+    "credits_premium": {
+      "type": "number"
+    },
+    "credits_booster": {
+      "type": "number"
+    },
+    "credits_events": {
+      "type": "number"
+    },
+    "credits_ads": {
+      "type": "number"
+    },
+    "credits_raiting": {
+      "type": "number"
+    },
+    "credits_repair_needed": {
+      "type": "number"
+    },
+    "credits_auto_repair": {
+      "type": "number"
+    },
+    "credits_auto_ammo": {
+      "type": "number"
+    },
+    "credits_auto_equip": {
+      "type": "number"
+    },
+    "credits_auto_prov": {
+      "type": "number"
+    },
+    "credits_auto_camo": {
+      "type": "number"
+    },
+    "exp": {
+      "type": "number"
+    },
+    "exp_multiplier": {
+      "type": "number"
+    },
+    "exp_efforts": {
+      "type": "number"
+    },
+    "exp_premium": {
+      "type": "number"
+    },
+    "exp_booster": {
+      "type": "number"
+    },
+    "exp_event": {
+      "type": "number"
+    },
+    "exp_ads": {
+      "type": "number"
+    },
+    "exp_raiting": {
+      "type": "number"
+    },
+    "free_exp": {
+      "type": "number"
+    },
+    "free_exp_prem": {
+      "type": "number"
+    },
+    "free_exp_booster": {
+      "type": "number"
+    },
+    "free_exp_event": {
+      "type": "number"
+    },
+    "free_exp_multiplier": {
+      "type": "number"
+    },
+    "crew_exp": {
+      "type": "number"
+    },
+    "crew_exp_prem": {
+      "type": "number"
+    },
+    "crew_exp_booster": {
+      "type": "number"
+    },
+    "crew_exp_event": {
+      "type": "number"
+    },
+    "crew_exp_multiplier": {
+      "type": "number"
+    },
+    "factor_daily_exp": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "factor_daily_credits": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "factor_aogas": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    }
+  }
+}

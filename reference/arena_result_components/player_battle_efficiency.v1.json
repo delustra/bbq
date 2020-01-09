@@ -1,0 +1,78 @@
+{
+  "title": "player_battle_efficiency",
+  "type": "object",
+  "properties": {
+    "capture_points": {
+      "type": "number"
+    },
+    "capture_points_dropped": {
+      "type": "number"
+    },
+    "captured_base": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "win_points": {
+      "type": "number"
+    },
+    "mileage_meter": {
+      "type": "number"
+    },
+    "shots": {
+      "type": "number"
+    },
+    "shots_auto_aim": {
+      "type": "number"
+    },
+    "hits": {
+      "type": "number"
+    },
+    "hits_dmg": {
+      "type": "number"
+    },
+    "hits_hp": {
+      "type": "number"
+    },
+    "damaged_vehicle": {
+      "type": "number"
+    },
+    "damage_dealt": {
+      "type": "number"
+    },
+    "damage_assisted_track": {
+      "type": "number"
+    },
+    "damage_assisted_radio": {
+      "type": "number"
+    },
+    "recieved_hits": {
+      "type": "number"
+    },
+    "received_hits_dmg": {
+      "type": "number"
+    },
+    "received_hits_hp": {
+      "type": "number"
+    },
+    "damage_received": {
+      "type": "number"
+    },
+    "damage_blocked": {
+      "type": "number"
+    },
+    "team_damage_dealt": {
+      "type": "number"
+    },
+    "team_kills_made": {
+      "type": "number"
+    },
+    "kills_made": {
+      "type": "number"
+    },
+    "spotted": {
+      "type": "number"
+    }
+  }
+}

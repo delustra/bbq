@@ -2,9 +2,12 @@
   "title": "team_result",
   "type": "object",
   "properties": {
-    "team_respawn": {
-      "type": "string",
-      "description": "Where the team respawned\n"
+    "team_id": {
+      "type": "array",
+      "description": "Where the team respawned",
+      "items": {
+        "type": "number"
+      }
     },
     "is_win": {
       "type": "boolean",
@@ -15,7 +18,7 @@
       "maxItems": 7,
       "minItems": 7,
       "items": {
-        "$ref": "./player_battle_result.v1.json"
+        "$ref": "./player_result.v1.json"
       }
     }
   }

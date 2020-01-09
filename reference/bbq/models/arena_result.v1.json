@@ -4,54 +4,60 @@
   "description": "WIP: Work in Progress\nThis event is sent when the battle is over",
   "properties": {
     "ts": {
-      "type": "string"
+      "type": "string",
+      "description": "Battle start date and time"
     },
     "arena_id": {
-      "type": "string"
+      "type": "string",
+      "description": "Battle identifier"
     },
     "battle_level_id": {
-      "type": "string"
+      "type": "array",
+      "description": "Level of the battle",
+      "items": {
+        "type": "number"
+      }
     },
     "battle_type_id": {
-      "type": "string"
+      "type": "array",
+      "description": "Type of the battle",
+      "items": {
+        "type": "number"
+      }
     },
     "duration": {
-      "type": "string"
-    },
-    "fog_of_war_mask": {
-      "type": "string",
-      "description": "Different types of visibility/fog of war"
+      "type": "number",
+      "description": "Battle duration in sec"
     },
     "game_play_type_id": {
-      "type": "string"
-    },
-    "logging_type_id": {
-      "type": "string"
-    },
-    "mm_type_id": {
-      "type": "string"
-    },
-    "periphery_id": {
-      "type": "string"
-    },
-    "vehicle_lock_mode_id": {
-      "type": "string"
-    },
-    "web_emitter_id": {
-      "type": "string"
-    },
-    "web_id": {
-      "type": "string"
+      "type": "array",
+      "description": "Gameplay type",
+      "items": {
+        "type": "number"
+      }
     },
     "win_type_id": {
-      "type": "string"
+      "type": "array",
+      "description": "Win type",
+      "items": {
+        "type": "number"
+      }
     },
     "teams": {
       "type": "array",
-      "minItems": 2,
+      "uniqueItems": false,
+      "minItems": 1,
       "items": {
-        "$ref": "../../common/team_result.v1.json"
+        "$ref": "../../arena_result_components/team_result.v1.json"
+      }
+    },
+    "map_type_id": {
+      "type": "array",
+      "description": "Map type identifier",
+      "items": {
+        "type": "number"
       }
     }
-  }
+  },
+  "x-examples": {}
 }

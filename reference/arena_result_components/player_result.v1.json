@@ -1,0 +1,66 @@
+{
+  "title": "player_battle_result",
+  "type": "object",
+  "properties": {
+    "spa_id": {
+      "type": "string"
+    },
+    "clan_id": {
+      "type": "string"
+    },
+    "prebattle_id": {
+      "type": "string"
+    },
+    "vehicle_cd": {
+      "type": "string"
+    },
+    "vehicle_equipment": {
+      "type": "array",
+      "items": {
+        "$ref": "./player_vehicle_equipment.v1.json"
+      }
+    },
+    "presence_time": {
+      "type": "number",
+      "description": "User presence time on arena (in seconds)"
+    },
+    "life_time": {
+      "type": "number",
+      "description": "User life time (until kill) in arena (in seconds)"
+    },
+    "remained_hp": {
+      "type": "number"
+    },
+    "killer_id": {
+      "type": "string"
+    },
+    "death_reason_id": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "battle_efficiency": {
+      "type": "number",
+      "description": "Battle user efficiency. Used for raiting calculation"
+    },
+    "battle_result": {
+      "type": "array",
+      "items": {
+        "$ref": "./player_battle_efficiency.v1.json"
+      }
+    },
+    "economy_result": {
+      "type": "array",
+      "items": {
+        "$ref": "./player_economy_result.v1.json"
+      }
+    },
+    "achievements": {
+      "type": "array",
+      "items": {
+        "$ref": "./player_achievements.v1.json"
+      }
+    }
+  }
+}

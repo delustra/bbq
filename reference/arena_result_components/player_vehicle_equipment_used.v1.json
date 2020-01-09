@@ -1,0 +1,24 @@
+{
+  "title": "player_vehicle_equipment_used",
+  "type": "object",
+  "properties": {
+    "item_type_id": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "item_type_cd": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "items_onboard": {
+      "type": "number"
+    },
+    "items_spent": {
+      "type": "number"
+    }
+  }
+}

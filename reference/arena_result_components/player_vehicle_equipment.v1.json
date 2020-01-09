@@ -1,0 +1,30 @@
+{
+  "title": "player_vehicle_equipment",
+  "type": "object",
+  "properties": {
+    "chassis_cd": {
+      "type": "string"
+    },
+    "engine_cd": {
+      "type": "string"
+    },
+    "turret_cd": {
+      "type": "string"
+    },
+    "gun_cd": {
+      "type": "string"
+    },
+    "vehicle_mastery": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "items_used": {
+      "type": "array",
+      "items": {
+        "$ref": "./player_vehicle_equipment_used.v1.json"
+      }
+    }
+  }
+}
