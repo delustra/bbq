@@ -2,6 +2,7 @@
   "title": "arena_result",
   "type": "object",
   "description": "WIP: Work in Progress\nThis event is sent when the battle is over",
+  "x-examples": {},
   "properties": {
     "ts": {
       "type": "string",
@@ -47,6 +48,7 @@
       "type": "array",
       "uniqueItems": false,
       "minItems": 1,
+      "description": "Teams and team members description\n",
       "items": {
         "$ref": "../../arena_result_components/team_result.v1.json"
       }
@@ -58,6 +60,5 @@
         "type": "number"
       }
     }
-  },
-  "x-examples": {}
+  }
 }

@@ -4,21 +4,25 @@
   "properties": {
     "item_type_id": {
       "type": "array",
+      "description": "Equipment type identificator",
       "items": {
         "type": "number"
       }
     },
-    "item_type_cd": {
+    "item_cd": {
       "type": "array",
+      "description": "Equipment copmact descriptor",
       "items": {
         "type": "number"
       }
     },
-    "items_onboard": {
-      "type": "number"
+    "item_onboard": {
+      "type": "number",
+      "description": "Equipment count on battle start on vehicle"
     },
-    "items_spent": {
-      "type": "number"
+    "item_spent": {
+      "type": "number",
+      "description": "Spending of equipment during battle"
     }
   }
 }

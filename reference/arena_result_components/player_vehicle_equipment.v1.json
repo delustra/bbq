@@ -2,29 +2,35 @@
   "title": "player_vehicle_equipment",
   "type": "object",
   "properties": {
-    "chassis_cd": {
-      "type": "string"
+    "veh_chassis_cd": {
+      "type": "string",
+      "description": "Chassis cd by user vehicle"
     },
-    "engine_cd": {
-      "type": "string"
+    "veh_turret_cd": {
+      "type": "string",
+      "description": "Turret cd by user vehicle"
     },
-    "turret_cd": {
-      "type": "string"
+    "veh_gun_cd": {
+      "type": "string",
+      "description": "Gun cd by user vehicle"
     },
-    "gun_cd": {
-      "type": "string"
-    },
-    "vehicle_mastery": {
+    "crew_mastery": {
       "type": "array",
+      "description": "Level of avatar mastery on this vehicle",
       "items": {
         "type": "number"
       }
     },
     "items_used": {
       "type": "array",
+      "description": "Equiment on vehicle and it's spending",
       "items": {
         "$ref": "./player_vehicle_equipment_used.v1.json"
       }
+    },
+    "veh_engine_cd": {
+      "type": "string",
+      "description": "Engine cd by user vehicle"
     }
   }
 }

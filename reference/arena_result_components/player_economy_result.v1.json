@@ -6,118 +6,154 @@
   },
   "properties": {
     "credits": {
-      "type": "number"
+      "type": "number",
+      "description": "Credits income by user vehicle without modificators below"
     },
     "credits_enriched": {
-      "type": "number"
+      "type": "number",
+      "description": "Credits income for vehicle enriched"
     },
     "credits_efforts": {
-      "type": "number"
+      "type": "number",
+      "description": "Credits income for villiant effort"
     },
     "credits_multiplier": {
-      "type": "number"
+      "type": "number",
+      "description": "Credits income for vehicle multiplier"
     },
     "credits_premium": {
-      "type": "number"
+      "type": "number",
+      "description": "Credits income for activated prem"
     },
     "credits_booster": {
-      "type": "number"
+      "type": "number",
+      "description": "Credits income for activated booster"
     },
     "credits_events": {
-      "type": "number"
+      "type": "number",
+      "description": "Credits income from events"
     },
     "credits_ads": {
-      "type": "number"
+      "type": "number",
+      "description": "Credits income for watching add after battle"
     },
     "credits_raiting": {
-      "type": "number"
+      "type": "number",
+      "description": "Credits income for raiting battle"
     },
     "credits_repair_needed": {
-      "type": "number"
+      "type": "number",
+      "description": "Full price credits repair costs"
     },
     "credits_auto_repair": {
-      "type": "number"
+      "type": "number",
+      "description": "Fact credits spent for repair with discount automaticly"
     },
     "credits_auto_ammo": {
-      "type": "number"
+      "type": "number",
+      "description": "Credits spent for ammunition automaticly"
     },
     "credits_auto_equip": {
-      "type": "number"
+      "type": "number",
+      "description": "Credits spent for equipment(consumables) automaticly"
     },
     "credits_auto_prov": {
-      "type": "number"
+      "type": "number",
+      "description": "Credits spent for provision automaticly"
     },
     "credits_auto_camo": {
-      "type": "number"
+      "type": "number",
+      "description": "Credits spent for camo autoamticly"
     },
     "exp": {
-      "type": "number"
+      "type": "number",
+      "description": "Exp income by user vehicle without modificators below"
     },
     "exp_multiplier": {
-      "type": "number"
+      "type": "number",
+      "description": "Exp additional income by multiplier"
     },
     "exp_efforts": {
-      "type": "number"
+      "type": "number",
+      "description": "Exp income for villiant effort"
     },
     "exp_premium": {
-      "type": "number"
+      "type": "number",
+      "description": "Exp income for activated prem"
     },
     "exp_booster": {
-      "type": "number"
+      "type": "number",
+      "description": "Exp income for activated booster"
     },
     "exp_event": {
-      "type": "number"
+      "type": "number",
+      "description": "Exp income from events"
     },
     "exp_ads": {
-      "type": "number"
+      "type": "number",
+      "description": "Exp income for watching add after battle"
     },
     "exp_raiting": {
-      "type": "number"
+      "type": "number",
+      "description": "Exp income from raiting battles"
     },
     "free_exp": {
-      "type": "number"
+      "type": "number",
+      "description": "Free exp income by user vehicle without modificators below"
     },
     "free_exp_prem": {
-      "type": "number"
+      "type": "number",
+      "description": "Free exp income for activated prem"
     },
     "free_exp_booster": {
-      "type": "number"
+      "type": "number",
+      "description": "Free exp income for actived booster"
     },
     "free_exp_event": {
-      "type": "number"
+      "type": "number",
+      "description": "Free exp income from events"
     },
     "free_exp_multiplier": {
-      "type": "number"
+      "type": "number",
+      "description": "Free exp additional income by multiplier"
     },
     "crew_exp": {
-      "type": "number"
+      "type": "number",
+      "description": "Crew exp income by user vehicle without modificators below"
     },
     "crew_exp_prem": {
-      "type": "number"
+      "type": "number",
+      "description": "Crew exp income for activated prem"
     },
     "crew_exp_booster": {
-      "type": "number"
+      "type": "number",
+      "description": "Crew exp income for activated booster"
     },
     "crew_exp_event": {
-      "type": "number"
+      "type": "number",
+      "description": "Crew exp income from events"
     },
     "crew_exp_multiplier": {
-      "type": "number"
+      "type": "number",
+      "description": "Crew exp additional income by multiplier"
     },
     "factor_daily_exp": {
       "type": "array",
+      "description": "Exp multiplier from daily, birthday bonus, certificates",
       "items": {
         "type": "number"
       }
     },
     "factor_daily_credits": {
       "type": "array",
+      "description": "Credits multiplier from daily, birthday bonus, certificates",
       "items": {
         "type": "number"
       }
     },
     "factor_aogas": {
       "type": "array",
+      "description": "Aogas factor multiplied to credits, exp, crew_exp, free_exp",
       "items": {
         "type": "number"
       }

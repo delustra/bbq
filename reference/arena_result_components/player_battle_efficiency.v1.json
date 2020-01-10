@@ -2,77 +2,112 @@
   "title": "player_battle_efficiency",
   "type": "object",
   "properties": {
-    "capture_points": {
-      "type": "number"
-    },
-    "capture_points_dropped": {
-      "type": "number"
-    },
-    "captured_base": {
+    "spotted": {
       "type": "array",
+      "description": "Enemies spotted by user vehicle",
       "items": {
         "type": "number"
       }
     },
-    "win_points": {
-      "type": "number"
-    },
-    "mileage_meter": {
-      "type": "number"
-    },
-    "shots": {
-      "type": "number"
-    },
-    "shots_auto_aim": {
-      "type": "number"
-    },
-    "hits": {
-      "type": "number"
-    },
-    "hits_dmg": {
-      "type": "number"
-    },
-    "hits_hp": {
-      "type": "number"
-    },
-    "damaged_vehicle": {
-      "type": "number"
-    },
-    "damage_dealt": {
-      "type": "number"
-    },
-    "damage_assisted_track": {
-      "type": "number"
-    },
-    "damage_assisted_radio": {
-      "type": "number"
-    },
-    "recieved_hits": {
-      "type": "number"
-    },
-    "received_hits_dmg": {
-      "type": "number"
-    },
-    "received_hits_hp": {
-      "type": "number"
-    },
-    "damage_received": {
-      "type": "number"
-    },
-    "damage_blocked": {
-      "type": "number"
-    },
-    "team_damage_dealt": {
-      "type": "number"
+    "kills_made": {
+      "type": "array",
+      "description": "Kills made by user vehicle",
+      "items": {
+        "type": "number"
+      }
     },
     "team_kills_made": {
-      "type": "number"
+      "type": "array",
+      "description": "Team kills made by user vehicle",
+      "items": {
+        "type": "number"
+      }
     },
-    "kills_made": {
-      "type": "number"
+    "team_damage_dealt": {
+      "type": "number",
+      "description": "Team damage dealt by user vehicle"
     },
-    "spotted": {
-      "type": "number"
+    "damage_blocked": {
+      "type": "number",
+      "description": "Damage blocked by user vehicle"
+    },
+    "damage_received": {
+      "type": "number",
+      "description": "Damage received by user vehicle"
+    },
+    "received_hits_hp": {
+      "type": "number",
+      "description": "Number of hits with damage to hp received"
+    },
+    "received_hits_dmg": {
+      "type": "number",
+      "description": "Number of hits to hp or modules received"
+    },
+    "recieved_hits": {
+      "type": "number",
+      "description": "Number of shots received user vehicle with damage and not"
+    },
+    "damage_assisted_radio": {
+      "type": "number",
+      "description": "Damage dealt by smb (not this user), with this user radio"
+    },
+    "damage_assisted_track": {
+      "type": "number",
+      "description": "Damage dealt by smb (not this user), after this user track crit"
+    },
+    "damage_dealt": {
+      "type": "number",
+      "description": "Damage dealt to enemys hp"
+    },
+    "damaged_vehicle": {
+      "type": "number",
+      "description": "Number of vehicle damaged to hp or modules"
+    },
+    "hits_hp": {
+      "type": "number",
+      "description": "Number of hits with damage currently to hp enemy armor"
+    },
+    "hits_dmg": {
+      "type": "number",
+      "description": "Number of hits with damage to hp or modules"
+    },
+    "hits": {
+      "type": "number",
+      "description": "Number of shots that reached enemy vehicle"
+    },
+    "shots_auto_aim": {
+      "type": "number",
+      "description": "Number of shots with auto aiming"
+    },
+    "shots": {
+      "type": "number",
+      "description": "Number of shots made"
+    },
+    "mileage_meter": {
+      "type": "number",
+      "description": "Mileage meter by user vehicle"
+    },
+    "win_points": {
+      "type": "array",
+      "description": "Number of win points contributed by player in supremacy mode.",
+      "items": {
+        "type": "number"
+      }
+    },
+    "captured_base": {
+      "type": "array",
+      "description": "Number of succesfully captured base where user take part in",
+      "items": {
+        "type": "number"
+      }
+    },
+    "capture_points_dropped": {
+      "type": "number",
+      "description": "Dropped enemys base capture points by user"
+    },
+    "capture_points": {
+      "type": "number",
+      "description": "Capture points by user vehicle in succesful base capture"
     }
   }
 }

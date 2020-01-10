@@ -3,10 +3,12 @@
   "type": "object",
   "properties": {
     "achievement_id": {
-      "type": "string"
+      "type": "string",
+      "description": "Achievement or ribbon compact descriptor"
     },
     "achievement_value": {
-      "type": "string"
+      "type": "string",
+      "description": "Achievement value or ribbon grade"
     }
   }
 }

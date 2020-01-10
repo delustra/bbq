@@ -3,19 +3,24 @@
   "type": "object",
   "properties": {
     "spa_id": {
-      "type": "string"
+      "type": "string",
+      "description": "Account identifier"
     },
     "clan_id": {
-      "type": "string"
+      "type": "string",
+      "description": "Clan indetifier"
     },
     "prebattle_id": {
-      "type": "string"
+      "type": "string",
+      "description": "Platoon_id / prebattle identifier"
     },
     "vehicle_cd": {
-      "type": "string"
+      "type": "string",
+      "description": "Vehicle type compact descriptor"
     },
     "vehicle_equipment": {
       "type": "array",
+      "description": "Vehicle equipment on arena start and its spending",
       "items": {
         "$ref": "./player_vehicle_equipment.v1.json"
       }
@@ -29,13 +34,16 @@
       "description": "User life time (until kill) in arena (in seconds)"
     },
     "remained_hp": {
-      "type": "number"
+      "type": "number",
+      "description": "Remained hp by user vehicle"
     },
     "killer_id": {
-      "type": "string"
+      "type": "string",
+      "description": "Spa_id of the killer vehicle. Self-kill is also possible"
     },
     "death_reason_id": {
       "type": "array",
+      "description": "Death_Reason id by user vehicle (if -1 user alive)",
       "items": {
         "type": "number"
       }
@@ -46,21 +54,28 @@
     },
     "battle_result": {
       "type": "array",
+      "description": "User's battle stats (damage, shots, etc)",
       "items": {
         "$ref": "./player_battle_efficiency.v1.json"
       }
     },
     "economy_result": {
       "type": "array",
+      "description": "User's income and expenses in battle",
       "items": {
         "$ref": "./player_economy_result.v1.json"
       }
     },
     "achievements": {
       "type": "array",
+      "description": "User's achievements and ribbons in battle",
       "items": {
         "$ref": "./player_achievements.v1.json"
       }
     }
-  }
+  },
+  "required": [
+    "spa_id",
+    "vehicle_cd"
+  ]
 }
