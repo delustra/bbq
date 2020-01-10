@@ -22,5 +22,8 @@
         "$ref": "./player_result.v1.json"
       }
     }
-  }
+  },
+  "required": [
+    "members"
+  ]
 }

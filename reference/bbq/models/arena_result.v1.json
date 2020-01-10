@@ -60,5 +60,10 @@
         "type": "number"
       }
     }
-  }
+  },
+  "required": [
+    "ts",
+    "arena_id",
+    "teams"
+  ]
 }
