@@ -1,0 +1,32 @@
+{
+  "title": "player_vehicle_equipment_used",
+  "type": "object",
+  "properties": {
+    "item_type_id": {
+      "type": "integer",
+      "description": "Equipment type identificator",
+      "enum": [
+        9,
+        10,
+        11,
+        13
+      ]
+    },
+    "item_cd": {
+      "description": "Equipment copmact descriptor",
+      "type": "integer"
+    },
+    "item_onboard": {
+      "type": "integer",
+      "description": "Equipment count on battle start on vehicle",
+      "minimum": 0,
+      "maximum": 2000
+    },
+    "item_spent": {
+      "type": "integer",
+      "description": "Spending of equipment during battle",
+      "minimum": -2000,
+      "maximum": 0
+    }
+  }
+}

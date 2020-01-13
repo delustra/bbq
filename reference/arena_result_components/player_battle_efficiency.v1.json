@@ -1,113 +1,109 @@
 {
   "title": "player_battle_efficiency",
   "type": "object",
+  "description": "",
   "properties": {
     "spotted": {
-      "type": "array",
+      "type": "integer",
       "description": "Enemies spotted by user vehicle",
-      "items": {
-        "type": "number"
-      }
+      "minimum": 0,
+      "maximum": 7
     },
     "kills_made": {
-      "type": "array",
+      "type": "integer",
       "description": "Kills made by user vehicle",
-      "items": {
-        "type": "number"
-      }
+      "minimum": 0,
+      "maximum": 20
     },
     "team_kills_made": {
-      "type": "array",
+      "type": "integer",
       "description": "Team kills made by user vehicle",
-      "items": {
-        "type": "number"
-      }
+      "minimum": 0,
+      "maximum": 7
     },
     "team_damage_dealt": {
-      "type": "number",
+      "type": "integer",
       "description": "Team damage dealt by user vehicle"
     },
     "damage_blocked": {
-      "type": "number",
+      "type": "integer",
       "description": "Damage blocked by user vehicle"
     },
     "damage_received": {
-      "type": "number",
+      "type": "integer",
       "description": "Damage received by user vehicle"
     },
     "received_hits_hp": {
-      "type": "number",
+      "type": "integer",
       "description": "Number of hits with damage to hp received"
     },
     "received_hits_dmg": {
-      "type": "number",
+      "type": "integer",
       "description": "Number of hits to hp or modules received"
     },
     "recieved_hits": {
-      "type": "number",
+      "type": "integer",
       "description": "Number of shots received user vehicle with damage and not"
     },
     "damage_assisted_radio": {
-      "type": "number",
+      "type": "integer",
       "description": "Damage dealt by smb (not this user), with this user radio"
     },
     "damage_assisted_track": {
-      "type": "number",
+      "type": "integer",
       "description": "Damage dealt by smb (not this user), after this user track crit"
     },
     "damage_dealt": {
-      "type": "number",
+      "type": "integer",
       "description": "Damage dealt to enemys hp"
     },
     "damaged_vehicle": {
-      "type": "number",
+      "type": "integer",
       "description": "Number of vehicle damaged to hp or modules"
     },
     "hits_hp": {
-      "type": "number",
+      "type": "integer",
       "description": "Number of hits with damage currently to hp enemy armor"
     },
     "hits_dmg": {
-      "type": "number",
+      "type": "integer",
       "description": "Number of hits with damage to hp or modules"
     },
     "hits": {
-      "type": "number",
+      "type": "integer",
       "description": "Number of shots that reached enemy vehicle"
     },
     "shots_auto_aim": {
-      "type": "number",
+      "type": "integer",
       "description": "Number of shots with auto aiming"
     },
     "shots": {
-      "type": "number",
+      "type": "integer",
       "description": "Number of shots made"
     },
     "mileage_meter": {
-      "type": "number",
+      "type": "integer",
       "description": "Mileage meter by user vehicle"
     },
     "win_points": {
-      "type": "array",
+      "type": "integer",
       "description": "Number of win points contributed by player in supremacy mode.",
-      "items": {
-        "type": "number"
-      }
+      "minimum": -100,
+      "maximum": 1000
     },
     "captured_base": {
-      "type": "array",
+      "type": "integer",
       "description": "Number of succesfully captured base where user take part in",
-      "items": {
-        "type": "number"
-      }
+      "minimum": 0,
+      "maximum": 10
     },
     "capture_points_dropped": {
-      "type": "number",
+      "type": "integer",
       "description": "Dropped enemys base capture points by user"
     },
     "capture_points": {
-      "type": "number",
-      "description": "Capture points by user vehicle in succesful base capture"
+      "description": "Capture points by user vehicle in succesful base capture",
+      "type": "integer"
     }
   }
 }

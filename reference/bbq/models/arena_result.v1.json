@@ -1,7 +1,7 @@
 {
   "title": "arena_result",
   "type": "object",
-  "description": "WIP: Work in Progress\nThis event is sent when the battle is over",
+  "description": "Important notes:\n1. event sent when the battle is over\n2. description doesn't consist technical parameters (like metadata)",
   "x-examples": {},
   "properties": {
     "ts": {
@@ -9,56 +9,85 @@
       "description": "Battle start date and time"
     },
     "arena_id": {
-      "type": "string",
+      "type": "integer",
       "description": "Battle identifier"
     },
     "battle_level_id": {
-      "type": "array",
+      "type": "integer",
       "description": "Level of the battle",
-      "items": {
-        "type": "number"
-      }
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
     },
     "battle_type_id": {
-      "type": "array",
+      "type": "integer",
       "description": "Type of the battle",
-      "items": {
-        "type": "number"
-      }
+      "enum": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        20,
+        22,
+        23
+      ]
     },
     "duration": {
-      "type": "number",
-      "description": "Battle duration in sec"
+      "type": "integer",
+      "description": "Battle duration in sec",
+      "minimum": 0,
+      "maximum": 600
     },
     "game_play_type_id": {
-      "type": "array",
+      "type": "integer",
       "description": "Gameplay type",
-      "items": {
-        "type": "number"
-      }
+      "enum": [
+        0,
+        1
+      ]
     },
     "win_type_id": {
-      "type": "array",
+      "type": "integer",
       "description": "Win type",
-      "items": {
-        "type": "number"
-      }
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10
+      ]
     },
     "teams": {
       "type": "array",
       "uniqueItems": false,
       "minItems": 1,
-      "description": "Teams and team members description\n",
+      "description": "Teams and team members description",
       "items": {
         "$ref": "../../arena_result_components/team_result.v1.json"
       }
     },
     "map_type_id": {
-      "type": "array",
+      "type": "integer",
       "description": "Map type identifier",
-      "items": {
-        "type": "number"
-      }
+      "minimum": 1,
+      "maximum": 42
     }
   },
   "required": [

@@ -3,15 +3,16 @@
   "type": "object",
   "properties": {
     "team_id": {
-      "type": "array",
+      "type": "number",
       "description": "Where the team respawned",
-      "items": {
-        "type": "number"
-      }
+      "enum": [
+        1,
+        2
+      ]
     },
     "is_win": {
       "type": "boolean",
-      "description": "1 - Win, 0 - Loose"
+      "description": "Is user win in this battle (1 - Win, 0 - Lose)"
     },
     "members": {
       "type": "array",

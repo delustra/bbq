@@ -3,54 +3,62 @@
   "type": "object",
   "properties": {
     "spa_id": {
-      "type": "string",
+      "type": "integer",
       "description": "Account identifier"
     },
     "clan_id": {
-      "type": "string",
+      "type": "integer",
       "description": "Clan indetifier"
     },
     "prebattle_id": {
-      "type": "string",
+      "type": "integer",
       "description": "Platoon_id / prebattle identifier"
     },
     "vehicle_cd": {
-      "type": "string",
+      "type": "integer",
       "description": "Vehicle type compact descriptor"
     },
-    "vehicle_equipment": {
-      "type": "array",
-      "description": "Vehicle equipment on arena start and its spending",
-      "items": {
-        "$ref": "./player_vehicle_equipment.v1.json"
-      }
-    },
     "presence_time": {
-      "type": "number",
-      "description": "User presence time on arena (in seconds)"
+      "type": "integer",
+      "description": "User presence time on arena (in seconds)",
+      "minimum": 0,
+      "maximum": 600
     },
     "life_time": {
-      "type": "number",
-      "description": "User life time (until kill) in arena (in seconds)"
+      "type": "integer",
+      "description": "User life time (until kill) in arena (in seconds)",
+      "minimum": 0,
+      "maximum": 560
     },
     "remained_hp": {
-      "type": "number",
-      "description": "Remained hp by user vehicle"
+      "type": "integer",
+      "description": "Remained hp by user vehicle",
+      "minimum": 0,
+      "maximum": 3000
     },
     "killer_id": {
-      "type": "string",
+      "type": "integer",
       "description": "Spa_id of the killer vehicle. Self-kill is also possible"
     },
     "death_reason_id": {
-      "type": "array",
+      "type": "integer",
       "description": "Death_Reason id by user vehicle (if -1 user alive)",
-      "items": {
-        "type": "number"
-      }
+      "enum": [
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
     },
     "battle_efficiency": {
-      "type": "number",
-      "description": "Battle user efficiency. Used for raiting calculation"
+      "type": "integer",
+      "description": "Battle user efficiency. Used for raiting calculation",
+      "minimum": 0,
+      "maximum": 2000
     },
     "battle_result": {
       "type": "array",
@@ -72,10 +80,42 @@
       "items": {
         "$ref": "./player_achievements.v1.json"
       }
+    },
+    "is_observer": {
+      "type": "boolean",
+      "description": "Was user an observer in this battle"
+    },
+    "items_used": {
+      "type": "array",
+      "description": "Equiment on vehicle and it's spending",
+      "items": {
+        "$ref": "./player_equipment.v1.json"
+      }
+    },
+    "crew_mastery": {
+      "type": "integer",
+      "description": "Level of avatar mastery on this vehicle",
+      "minimum": 50,
+      "maximum": 100
+    },
+    "veh_gun_cd": {
+      "type": "integer",
+      "description": "Gun cd by user vehicle"
+    },
+    "veh_turret_cd": {
+      "type": "integer",
+      "description": "Turret cd by user vehicle"
+    },
+    "veh_chassis_cd": {
+      "type": "integer",
+      "description": "Chassis cd by user vehicle"
+    },
+    "veh_engine_cd": {
+      "type": "integer",
+      "description": "Engine cd by user vehicle"
     }
   },
   "required": [
-    "spa_id",
-    "vehicle_cd"
+    "spa_id"
   ]
 }

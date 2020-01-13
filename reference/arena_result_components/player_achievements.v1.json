@@ -2,13 +2,21 @@
   "title": "player_achievements",
   "type": "object",
   "properties": {
-    "achievement_id": {
-      "type": "string",
+    "achievement_cd": {
+      "type": "integer",
       "description": "Achievement or ribbon compact descriptor"
     },
     "achievement_value": {
-      "type": "string",
-      "description": "Achievement value or ribbon grade"
+      "description": "Achievement value or ribbon grade",
+      "type": "integer"
+    },
+    "achievement_type_id": {
+      "type": "integer",
+      "description": "Achievement type identificator (1 - achievement, 2 - ribbon)",
+      "enum": [
+        1,
+        2
+      ]
     }
   }
 }
