@@ -104,6 +104,22 @@
     "capture_points": {
       "description": "Capture points by user vehicle in succesful base capture",
       "type": "integer"
+    },
+    "hits_heal_hp": {
+      "type": "integer",
+      "description": "Number of hits with damage currently to allies, that hill them"
+    },
+    "damage_heal": {
+      "type": "integer",
+      "description": "Damage to allies to heal hp"
+    },
+    "recieved_hits_heal_hp": {
+      "type": "integer",
+      "description": "Number of shots received user vehicle with heal"
+    },
+    "damage_healed": {
+      "type": "integer",
+      "description": "Count of healed hp by user vehicle"
     }
   }
 }

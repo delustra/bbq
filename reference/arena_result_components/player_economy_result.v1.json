@@ -137,13 +137,13 @@
       "type": "integer",
       "description": "Crew exp additional income by multiplier"
     },
-    "factor_daily_exp": {
+    "factor_exp": {
       "type": "integer",
       "description": "Exp multiplier from daily, birthday bonus, certificates",
       "minimum": 0,
       "maximum": 50
     },
-    "factor_daily_credits": {
+    "factor_credits": {
       "type": "integer",
       "description": "Credits multiplier from daily, birthday bonus, certificates",
       "minimum": 0,

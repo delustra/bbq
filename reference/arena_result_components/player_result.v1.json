@@ -113,6 +113,21 @@
     "veh_engine_cd": {
       "type": "integer",
       "description": "Engine cd by user vehicle"
+    },
+    "mm_type": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "description": "MatchMaker user's queue type"
+    },
+    "battle_num": {
+      "type": "integer",
+      "description": "Number of battle for this current spa_id. All battle types included"
     }
   },
   "required": [

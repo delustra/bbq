@@ -1,10 +1,10 @@
 {
   "title": "arena_result",
   "type": "object",
-  "description": "Important notes:\n1. event sent when the battle is over\n2. description doesn't consist technical parameters (like metadata)",
+  "description": "Important notes:\n1. event sent when the battle is over\n2. description doesn't consist technical parameters (like metadata, inner_local_ip, periphery_id)",
   "x-examples": {},
   "properties": {
-    "ts": {
+    "start_ts": {
       "type": "string",
       "description": "Battle start date and time"
     },
@@ -51,7 +51,7 @@
       "minimum": 0,
       "maximum": 600
     },
-    "game_play_type_id": {
+    "gameplay_type_id": {
       "type": "integer",
       "description": "Gameplay type",
       "enum": [
@@ -91,7 +91,7 @@
     }
   },
   "required": [
-    "ts",
+    "start_ts",
     "arena_id",
     "teams"
   ]
