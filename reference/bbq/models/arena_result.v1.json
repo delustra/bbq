@@ -74,6 +74,12 @@
         10
       ]
     },
+        "map_type_id": {
+      "type": "integer",
+      "description": "Map type identifier",
+      "minimum": 1,
+      "maximum": 42
+    },
     "teams": {
       "type": "array",
       "uniqueItems": false,
@@ -82,13 +88,8 @@
       "items": {
         "$ref": "../../arena_result_components/team_result.v1.json"
       }
-    },
-    "map_type_id": {
-      "type": "integer",
-      "description": "Map type identifier",
-      "minimum": 1,
-      "maximum": 42
     }
+
   },
   "required": [
     "start_ts",
