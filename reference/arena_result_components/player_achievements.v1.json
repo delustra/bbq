@@ -2,14 +2,6 @@
   "title": "player_achievements",
   "type": "object",
   "properties": {
-    "achievement_cd": {
-      "type": "integer",
-      "description": "Achievement or ribbon compact descriptor"
-    },
-    "achievement_value": {
-      "description": "Achievement value or ribbon grade",
-      "type": "integer"
-    },
     "achievement_type_id": {
       "type": "integer",
       "description": "Achievement type identificator (1 - achievement, 2 - ribbon)",
@@ -17,6 +9,26 @@
         1,
         2
       ]
+    },
+    "achievement_type_name": {
+      "type": "string",
+      "description": "Achievement type name"
+    },
+    "achievement_id": {
+      "type": "integer",
+      "description": "Achievement or ribbon compact descriptor"
+    },
+    "achievement_name": {
+      "type": "string",
+      "description": "Achievement or ribbon name"
+    },
+    "achievement_grade": {
+      "type": "integer",
+      "description": "Grade of achievement if it exist. 0 - without grade"
+    },
+    "achievement_value": {
+      "description": "Achievement or ribbon value",
+      "type": "integer"
     }
   }
 }

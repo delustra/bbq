@@ -25,25 +25,71 @@
       "type": "integer",
       "description": "Team damage dealt by user vehicle"
     },
-    "damage_blocked": {
+    "in_damage_blocked": {
       "type": "integer",
       "description": "Damage blocked by user vehicle"
     },
-    "damage_received": {
+    "in_damage_received": {
       "type": "integer",
       "description": "Damage received by user vehicle"
     },
-    "received_hits_hp": {
+    "in_damage_healed": {
       "type": "integer",
-      "description": "Number of hits with damage to hp received"
+      "description": "Count of healed hp by user vehicle"
+    },
+    "remained_hp": {
+      "type": "integer",
+      "description": "Remained hp by user vehicle",
+      "minimum": 0,
+      "maximum": 3000
+    },
+    "recieved_hits": {
+      "type": "integer",
+      "description": "Number of shots received user vehicle with damage and not"
     },
     "received_hits_dmg": {
       "type": "integer",
       "description": "Number of hits to hp or modules received"
     },
-    "recieved_hits": {
+    "received_hits_hp": {
       "type": "integer",
-      "description": "Number of shots received user vehicle with damage and not"
+      "description": "Number of hits with damage to hp received"
+    },
+    "recieved_hits_heal_hp": {
+      "type": "integer",
+      "description": "Number of shots received user vehicle with heal"
+    },
+    "shots": {
+      "type": "integer",
+      "description": "Number of shots made"
+    },
+    "shots_auto_aim": {
+      "type": "integer",
+      "description": "Number of shots with auto aiming"
+    },
+    "hits": {
+      "type": "integer",
+      "description": "Number of shots that reached enemy vehicle"
+    },
+    "hits_dmg": {
+      "type": "integer",
+      "description": "Number of hits with damage to hp or modules"
+    },
+    "hits_hp": {
+      "type": "integer",
+      "description": "Number of hits with damage currently to hp enemy armor"
+    },
+    "hits_heal_hp": {
+      "type": "integer",
+      "description": "Number of hits with damage currently to allies, that hill them"
+    },
+    "damaged_vehicle": {
+      "type": "integer",
+      "description": "Number of vehicle damaged to hp or modules"
+    },
+    "damage_dealt": {
+      "type": "integer",
+      "description": "Damage dealt to enemys hp"
     },
     "damage_assisted_radio": {
       "type": "integer",
@@ -53,33 +99,9 @@
       "type": "integer",
       "description": "Damage dealt by smb (not this user), after this user track crit"
     },
-    "damage_dealt": {
+    "damage_heal": {
       "type": "integer",
-      "description": "Damage dealt to enemys hp"
-    },
-    "damaged_vehicle": {
-      "type": "integer",
-      "description": "Number of vehicle damaged to hp or modules"
-    },
-    "hits_hp": {
-      "type": "integer",
-      "description": "Number of hits with damage currently to hp enemy armor"
-    },
-    "hits_dmg": {
-      "type": "integer",
-      "description": "Number of hits with damage to hp or modules"
-    },
-    "hits": {
-      "type": "integer",
-      "description": "Number of shots that reached enemy vehicle"
-    },
-    "shots_auto_aim": {
-      "type": "integer",
-      "description": "Number of shots with auto aiming"
-    },
-    "shots": {
-      "type": "integer",
-      "description": "Number of shots made"
+      "description": "Damage to allies to heal hp"
     },
     "mileage_meter": {
       "type": "integer",
@@ -88,7 +110,7 @@
     "win_points": {
       "type": "integer",
       "description": "Number of win points contributed by player in supremacy mode.",
-      "minimum": -100,
+      "minimum": -50,
       "maximum": 1000
     },
     "captured_base": {
@@ -97,29 +119,36 @@
       "minimum": 0,
       "maximum": 10
     },
+    "capture_points": {
+      "type": "integer",
+      "description": "Capture points by user vehicle in succesful base capture"
+    },
     "capture_points_dropped": {
       "type": "integer",
       "description": "Dropped enemys base capture points by user"
-    },
-    "capture_points": {
-      "description": "Capture points by user vehicle in succesful base capture",
-      "type": "integer"
-    },
-    "hits_heal_hp": {
-      "type": "integer",
-      "description": "Number of hits with damage currently to allies, that hill them"
-    },
-    "damage_heal": {
-      "type": "integer",
-      "description": "Damage to allies to heal hp"
-    },
-    "recieved_hits_heal_hp": {
-      "type": "integer",
-      "description": "Number of shots received user vehicle with heal"
-    },
-    "damage_healed": {
-      "type": "integer",
-      "description": "Count of healed hp by user vehicle"
     }
-  }
+  },
+  "required": [
+    "spotted",
+    "kills_made",
+    "in_damage_blocked",
+    "in_damage_received",
+    "remained_hp",
+    "recieved_hits",
+    "received_hits_dmg",
+    "received_hits_hp",
+    "shots",
+    "shots_auto_aim",
+    "hits",
+    "hits_dmg",
+    "hits_hp",
+    "damaged_vehicle",
+    "damage_dealt",
+    "damage_assisted_radio",
+    "damage_assisted_track",
+    "mileage_meter",
+    "captured_base",
+    "capture_points",
+    "capture_points_dropped"
+  ]
 }

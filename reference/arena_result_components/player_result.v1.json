@@ -1,10 +1,15 @@
 {
   "title": "player_battle_result",
   "type": "object",
+  "description": "",
   "properties": {
     "spa_id": {
       "type": "integer",
       "description": "Account identifier"
+    },
+    "is_observer": {
+      "type": "boolean",
+      "description": "Was user an observer in this battle"
     },
     "clan_id": {
       "type": "integer",
@@ -14,27 +19,31 @@
       "type": "integer",
       "description": "Platoon_id / prebattle identifier"
     },
-    "vehicle_cd": {
+    "vehicle_id": {
       "type": "integer",
       "description": "Vehicle type compact descriptor"
     },
-    "presence_time": {
+    "vehicle_name": {
+      "type": "string",
+      "description": "Vehicle name"
+    },
+    "respaun_num": {
+      "type": "integer",
+      "description": "Row number of user's respaun in the battle. (if 0 - mode without respaun)",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "time_presence": {
       "type": "integer",
       "description": "User presence time on arena (in seconds)",
       "minimum": 0,
       "maximum": 600
     },
-    "life_time": {
+    "time_life": {
       "type": "integer",
       "description": "User life time (until kill) in arena (in seconds)",
       "minimum": 0,
       "maximum": 560
-    },
-    "remained_hp": {
-      "type": "integer",
-      "description": "Remained hp by user vehicle",
-      "minimum": 0,
-      "maximum": 3000
     },
     "killer_id": {
       "type": "integer",
@@ -54,11 +63,9 @@
         6
       ]
     },
-    "battle_efficiency": {
-      "type": "integer",
-      "description": "Battle user efficiency. Used for raiting calculation",
-      "minimum": 0,
-      "maximum": 2000
+    "death_reason_name": {
+      "type": "string",
+      "description": "User's vehicle death reason (if -1 user alive)"
     },
     "battle_result": {
       "type": "array",
@@ -81,40 +88,36 @@
         "$ref": "./player_achievements.v1.json"
       }
     },
-    "is_observer": {
-      "type": "boolean",
-      "description": "Was user an observer in this battle"
-    },
-    "items_used": {
-      "type": "array",
-      "description": "Equiment on vehicle and it's spending",
-      "items": {
-        "$ref": "./player_equipment.v1.json"
-      }
-    },
     "crew_mastery": {
       "type": "integer",
       "description": "Level of avatar mastery on this vehicle",
       "minimum": 50,
       "maximum": 100
     },
-    "veh_gun_cd": {
+    "veh_gun_id": {
       "type": "integer",
       "description": "Gun cd by user vehicle"
     },
-    "veh_turret_cd": {
+    "veh_turret_id": {
       "type": "integer",
       "description": "Turret cd by user vehicle"
     },
-    "veh_chassis_cd": {
+    "veh_chassis_id": {
       "type": "integer",
       "description": "Chassis cd by user vehicle"
     },
-    "veh_engine_cd": {
+    "veh_engine_id": {
       "type": "integer",
       "description": "Engine cd by user vehicle"
     },
-    "mm_type": {
+    "item_used": {
+      "type": "array",
+      "description": "Equiment on vehicle and it's spending",
+      "items": {
+        "$ref": "./player_equipment.v1.json"
+      }
+    },
+    "mm_type_id": {
       "type": "integer",
       "enum": [
         "0",
@@ -125,12 +128,52 @@
       ],
       "description": "MatchMaker user's queue type"
     },
-    "battle_num": {
+    "num_global": {
       "type": "integer",
-      "description": "Number of battle for this current spa_id. All battle types included"
+      "description": "Number of battle for this current spa_id. All battle types included",
+      "minimum": 0
+    },
+    "num_mode": {
+      "type": "integer",
+      "description": "Number of battle in this battle type for this current spa_id. Only battle in this battle type increase counter",
+      "minimum": 0
+    },
+    "is_calibration": {
+      "type": "boolean",
+      "description": "Is battle in calibration set"
+    },
+    "rating_end": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 7000,
+      "description": "Battle raiting of user at the battle end (not MMR - raiting in interface)"
+    },
+    "battle_efficiency": {
+      "type": "integer",
+      "description": "Battle user efficiency. Used for raiting calculation but its NOT raiting",
+      "minimum": 0,
+      "maximum": 2000
     }
   },
   "required": [
-    "spa_id"
+    "spa_id",
+    "vehicle_id",
+    "vehicle_name",
+    "time_presence",
+    "time_life",
+    "killer_id",
+    "death_reason_id",
+    "death_reason_name",
+    "battle_result",
+    "economy_result",
+    "crew_mastery",
+    "veh_gun_id",
+    "veh_turret_id",
+    "veh_chassis_id",
+    "veh_engine_id",
+    "mm_type_id",
+    "num_global",
+    "num_mode",
+    "battle_efficiency"
   ]
 }

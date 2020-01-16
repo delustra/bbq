@@ -4,8 +4,9 @@
   "x-examples": {
     "example-1": {}
   },
+  "description": "",
   "properties": {
-    "credits": {
+    "cl_credits": {
       "description": "Credits income by user vehicle without modificators below",
       "type": "integer"
     },
@@ -37,7 +38,7 @@
       "type": "integer",
       "description": "Credits income for watching add after battle"
     },
-    "credits_raiting": {
+    "credits_rating": {
       "type": "integer",
       "description": "Credits income for raiting battle"
     },
@@ -65,7 +66,11 @@
       "type": "integer",
       "description": "Credits spent for camo autoamticly"
     },
-    "exp": {
+    "end_credits": {
+      "type": "integer",
+      "description": "Final credits count user get after battle with all modificators"
+    },
+    "cl_exp": {
       "type": "integer",
       "description": "Exp income by user vehicle without modificators below"
     },
@@ -93,11 +98,15 @@
       "type": "integer",
       "description": "Exp income for watching add after battle"
     },
-    "exp_raiting": {
+    "exp_rating": {
       "type": "integer",
       "description": "Exp income from raiting battles"
     },
-    "free_exp": {
+    "end_exp": {
+      "type": "integer",
+      "description": "Final exp count user get after battle with all modificators"
+    },
+    "cl_free_exp": {
       "type": "integer",
       "description": "Free exp income by user vehicle without modificators below"
     },
@@ -117,7 +126,11 @@
       "type": "integer",
       "description": "Free exp additional income by multiplier"
     },
-    "crew_exp": {
+    "end_free_exp": {
+      "type": "integer",
+      "description": "Final free exp count user get after battle with all modificators"
+    },
+    "cl_crew_exp": {
       "type": "integer",
       "description": "Crew exp income by user vehicle without modificators below"
     },
@@ -136,6 +149,10 @@
     "crew_exp_multiplier": {
       "type": "integer",
       "description": "Crew exp additional income by multiplier"
+    },
+    "end_crew_exp": {
+      "type": "integer",
+      "description": "Final crew exp count user get after battle with all modificators"
     },
     "factor_exp": {
       "type": "integer",
@@ -160,5 +177,24 @@
         10
       ]
     }
-  }
+  },
+  "required": [
+    "cl_credits",
+    "credits_repair_needed",
+    "credits_auto_repair",
+    "credits_auto_ammo",
+    "credits_auto_equip",
+    "credits_auto_prov",
+    "credits_auto_camo",
+    "end_credits",
+    "cl_exp",
+    "end_exp",
+    "cl_free_exp",
+    "end_free_exp",
+    "cl_crew_exp",
+    "end_crew_exp",
+    "factor_exp",
+    "factor_credits",
+    "factor_aogas"
+  ]
 }

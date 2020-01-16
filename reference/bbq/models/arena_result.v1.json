@@ -32,7 +32,7 @@
     },
     "battle_type_id": {
       "type": "integer",
-      "description": "Type of the battle",
+      "description": "Type of the battle identificator",
       "enum": [
         1,
         2,
@@ -45,23 +45,25 @@
         23
       ]
     },
-    "duration": {
-      "type": "integer",
-      "description": "Battle duration in sec",
-      "minimum": 0,
-      "maximum": 600
+    "battle_type_name": {
+      "type": "string",
+      "description": "Type of the battle name"
     },
     "gameplay_type_id": {
       "type": "integer",
-      "description": "Gameplay type",
+      "description": "Gameplay type identificator",
       "enum": [
         0,
         1
       ]
     },
+    "gameplay_type_name": {
+      "type": "string",
+      "description": "Gameplay type name"
+    },
     "win_type_id": {
       "type": "integer",
-      "description": "Win type",
+      "description": "Win type identificator",
       "enum": [
         0,
         1,
@@ -74,26 +76,50 @@
         10
       ]
     },
-        "map_type_id": {
+    "win_type_name": {
+      "type": "string",
+      "description": "Win type name"
+    },
+    "map_type_id": {
       "type": "integer",
       "description": "Map type identifier",
       "minimum": 1,
       "maximum": 42
     },
+    "map_type_name": {
+      "type": "string",
+      "description": "Map type name"
+    },
+    "duration": {
+      "type": "integer",
+      "description": "Battle duration in sec",
+      "minimum": 0,
+      "maximum": 600
+    },
     "teams": {
       "type": "array",
-      "uniqueItems": false,
-      "minItems": 1,
       "description": "Teams and team members description",
+      "uniqueItems": false,
+      "maxItems": 2,
+      "minItems": 1,
       "items": {
         "$ref": "../../arena_result_components/team_result.v1.json"
       }
     }
-
   },
   "required": [
     "start_ts",
     "arena_id",
+    "battle_level_id",
+    "battle_type_id",
+    "battle_type_name",
+    "gameplay_type_id",
+    "gameplay_type_name",
+    "win_type_id",
+    "win_type_name",
+    "map_type_id",
+    "map_type_name",
+    "duration",
     "teams"
   ]
 }

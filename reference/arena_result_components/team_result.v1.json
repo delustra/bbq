@@ -3,7 +3,7 @@
   "type": "object",
   "properties": {
     "team_id": {
-      "type": "number",
+      "type": "integer",
       "description": "Where the team respawned",
       "enum": [
         1,
@@ -17,7 +17,7 @@
     "members": {
       "type": "array",
       "description": "Team members description",
-      "maxItems": 9,
+      "maxItems": 21,
       "minItems": 1,
       "items": {
         "$ref": "./player_result.v1.json"
@@ -25,6 +25,8 @@
     }
   },
   "required": [
+    "team_id",
+    "is_win",
     "members"
   ]
 }

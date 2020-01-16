@@ -12,9 +12,17 @@
         13
       ]
     },
-    "item_cd": {
+    "item_type_name": {
+      "type": "string",
+      "description": "Equipment type name"
+    },
+    "item_id": {
       "description": "Equipment copmact descriptor",
       "type": "integer"
+    },
+    "item_name": {
+      "type": "string",
+      "description": "Equipment name"
     },
     "item_onboard": {
       "type": "integer",
@@ -24,7 +32,7 @@
     },
     "item_spent": {
       "type": "integer",
-      "description": "Spending of equipment during battle",
+      "description": "Count equipment spents during battle. For provisions - times used during battle.",
       "minimum": -2000,
       "maximum": 0
     }
