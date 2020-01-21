@@ -12,7 +12,7 @@
     },
     "is_win": {
       "type": "boolean",
-      "description": "Is user win in this battle (1 - Win, 0 - Lose)"
+      "description": "Is user win in this battle (True - Win, False - Lose)"
     },
     "members": {
       "type": "array",

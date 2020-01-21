@@ -13,29 +13,17 @@
       "type": "integer",
       "description": "Kills made by user vehicle",
       "minimum": 0,
-      "maximum": 20
+      "maximum": 21
     },
-    "team_kills_made": {
+    "damage_blocked": {
       "type": "integer",
-      "description": "Team kills made by user vehicle",
-      "minimum": 0,
-      "maximum": 7
+      "description": "Damage blocked by user vehicle",
+      "minimum": 0
     },
-    "team_damage_dealt": {
+    "damage_received": {
       "type": "integer",
-      "description": "Team damage dealt by user vehicle"
-    },
-    "in_damage_blocked": {
-      "type": "integer",
-      "description": "Damage blocked by user vehicle"
-    },
-    "in_damage_received": {
-      "type": "integer",
-      "description": "Damage received by user vehicle"
-    },
-    "in_damage_healed": {
-      "type": "integer",
-      "description": "Count of healed hp by user vehicle"
+      "description": "Damage received by user vehicle",
+      "minimum": 0
     },
     "remained_hp": {
       "type": "integer",
@@ -45,67 +33,79 @@
     },
     "recieved_hits": {
       "type": "integer",
-      "description": "Number of shots received user vehicle with damage and not"
+      "description": "Number of shots user's vehicle received with damage and not",
+      "minimum": 0
     },
-    "received_hits_dmg": {
+    "received_hits_without_dmg": {
       "type": "integer",
-      "description": "Number of hits to hp or modules received"
+      "description": "Number of hits received without any damage",
+      "minimum": 0
     },
     "received_hits_hp": {
       "type": "integer",
-      "description": "Number of hits with damage to hp received"
+      "description": "Number of hits with damage to hp received",
+      "minimum": 0
     },
-    "recieved_hits_heal_hp": {
+    "recieved_hits_teammates": {
       "type": "integer",
-      "description": "Number of shots received user vehicle with heal"
+      "description": "Number of hits received from teammates",
+      "minimum": 0
     },
     "shots": {
       "type": "integer",
-      "description": "Number of shots made"
+      "description": "Number of shots made",
+      "minimum": 0
     },
     "shots_auto_aim": {
       "type": "integer",
-      "description": "Number of shots with auto aiming"
+      "description": "Number of shots with auto aiming",
+      "minimum": 0
     },
     "hits": {
       "type": "integer",
-      "description": "Number of shots that reached enemy vehicle"
+      "description": "Number of shots that reached enemy vehicle",
+      "minimum": 0
     },
-    "hits_dmg": {
+    "hits_without_dmg": {
       "type": "integer",
-      "description": "Number of hits with damage to hp or modules"
+      "description": "Number of hits without damage to enemy's hp or modules",
+      "minimum": 0
+    },
+    "hits_module_only": {
+      "type": "integer",
+      "description": "Number of hits with damage only to enemy's modules, without damage to enemy's hp",
+      "minimum": 0
     },
     "hits_hp": {
       "type": "integer",
-      "description": "Number of hits with damage currently to hp enemy armor"
-    },
-    "hits_heal_hp": {
-      "type": "integer",
-      "description": "Number of hits with damage currently to allies, that hill them"
+      "description": "Number of hits with damage currently to allies, that hill them",
+      "minimum": 0
     },
     "damaged_vehicle": {
       "type": "integer",
-      "description": "Number of vehicle damaged to hp or modules"
+      "description": "Number of vehicle damaged to hp or modules",
+      "minimum": 0,
+      "maximum": 21
     },
     "damage_dealt": {
       "type": "integer",
-      "description": "Damage dealt to enemys hp"
+      "description": "Damage dealt to enemys hp",
+      "minimum": 0
     },
     "damage_assisted_radio": {
       "type": "integer",
-      "description": "Damage dealt by smb (not this user), with this user radio"
+      "description": "Damage dealt by smb (not this user), with this user radio",
+      "minimum": 0
     },
     "damage_assisted_track": {
       "type": "integer",
-      "description": "Damage dealt by smb (not this user), after this user track crit"
-    },
-    "damage_heal": {
-      "type": "integer",
-      "description": "Damage to allies to heal hp"
+      "description": "Damage dealt by smb (not this user), after this user track crit",
+      "minimum": 0
     },
     "mileage_meter": {
       "type": "integer",
-      "description": "Mileage meter by user vehicle"
+      "description": "Mileage meter by user vehicle",
+      "minimum": 0
     },
     "win_points": {
       "type": "integer",
@@ -121,26 +121,56 @@
     },
     "capture_points": {
       "type": "integer",
-      "description": "Capture points by user vehicle in succesful base capture"
+      "description": "Capture points by user vehicle in succesful base capture",
+      "minimum": 0,
+      "maximum": 1000
     },
     "capture_points_dropped": {
       "type": "integer",
-      "description": "Dropped enemys base capture points by user"
+      "description": "Dropped enemys base capture points by user",
+      "minimum": 0,
+      "maximum": 1000
+    },
+    "heal_income": {
+      "type": "integer",
+      "description": "Count hp that came from something to user's vehicle",
+      "minimum": 0
+    },
+    "heal_outcome": {
+      "type": "integer",
+      "description": "Count hp that user give to somebody in any way",
+      "minimum": 0
+    },
+    "heal_self": {
+      "type": "integer",
+      "description": "Count hp that user regenerate by himself",
+      "minimum": 0
+    },
+    "hits_teammates": {
+      "type": "integer",
+      "description": "Number of shots that reached teammates vehicle",
+      "minimum": 0
+    },
+    "recieved_hits_module_only": {
+      "type": "integer",
+      "description": "Number of hits received with damage only to vehicle modules",
+      "minimum": 0
     }
   },
   "required": [
     "spotted",
     "kills_made",
-    "in_damage_blocked",
-    "in_damage_received",
+    "damage_blocked",
+    "damage_received",
     "remained_hp",
     "recieved_hits",
-    "received_hits_dmg",
+    "received_hits_without_dmg",
     "received_hits_hp",
     "shots",
     "shots_auto_aim",
     "hits",
-    "hits_dmg",
+    "hits_without_dmg",
+    "hits_module_only",
     "hits_hp",
     "damaged_vehicle",
     "damage_dealt",
@@ -149,6 +179,7 @@
     "mileage_meter",
     "captured_base",
     "capture_points",
-    "capture_points_dropped"
+    "capture_points_dropped",
+    "recieved_hits_module_only"
   ]
 }

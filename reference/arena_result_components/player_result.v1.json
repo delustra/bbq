@@ -9,7 +9,7 @@
     },
     "is_observer": {
       "type": "boolean",
-      "description": "Was user an observer in this battle"
+      "description": "Was user an observer in this battle. True - was, False - wasn't"
     },
     "clan_id": {
       "type": "integer",
@@ -19,102 +19,17 @@
       "type": "integer",
       "description": "Platoon_id / prebattle identifier"
     },
-    "vehicle_id": {
-      "type": "integer",
-      "description": "Vehicle type compact descriptor"
-    },
-    "vehicle_name": {
-      "type": "string",
-      "description": "Vehicle name"
-    },
-    "respaun_num": {
-      "type": "integer",
-      "description": "Row number of user's respaun in the battle. (if 0 - mode without respaun)",
-      "minimum": 0,
-      "maximum": 3
-    },
     "time_presence": {
       "type": "integer",
       "description": "User presence time on arena (in seconds)",
       "minimum": 0,
-      "maximum": 600
-    },
-    "time_life": {
-      "type": "integer",
-      "description": "User life time (until kill) in arena (in seconds)",
-      "minimum": 0,
-      "maximum": 560
-    },
-    "killer_id": {
-      "type": "integer",
-      "description": "Spa_id of the killer vehicle. Self-kill is also possible"
-    },
-    "death_reason_id": {
-      "type": "integer",
-      "description": "Death_Reason id by user vehicle (if -1 user alive)",
-      "enum": [
-        -1,
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
-    },
-    "death_reason_name": {
-      "type": "string",
-      "description": "User's vehicle death reason (if -1 user alive)"
-    },
-    "battle_result": {
-      "type": "array",
-      "description": "User's battle stats (damage, shots, etc)",
-      "items": {
-        "$ref": "./player_battle_efficiency.v1.json"
-      }
-    },
-    "economy_result": {
-      "type": "array",
-      "description": "User's income and expenses in battle",
-      "items": {
-        "$ref": "./player_economy_result.v1.json"
-      }
+      "maximum": 800
     },
     "achievements": {
       "type": "array",
       "description": "User's achievements and ribbons in battle",
       "items": {
         "$ref": "./player_achievements.v1.json"
-      }
-    },
-    "crew_mastery": {
-      "type": "integer",
-      "description": "Level of avatar mastery on this vehicle",
-      "minimum": 50,
-      "maximum": 100
-    },
-    "veh_gun_id": {
-      "type": "integer",
-      "description": "Gun cd by user vehicle"
-    },
-    "veh_turret_id": {
-      "type": "integer",
-      "description": "Turret cd by user vehicle"
-    },
-    "veh_chassis_id": {
-      "type": "integer",
-      "description": "Chassis cd by user vehicle"
-    },
-    "veh_engine_id": {
-      "type": "integer",
-      "description": "Engine cd by user vehicle"
-    },
-    "item_used": {
-      "type": "array",
-      "description": "Equiment on vehicle and it's spending",
-      "items": {
-        "$ref": "./player_equipment.v1.json"
       }
     },
     "mm_type_id": {
@@ -140,7 +55,7 @@
     },
     "is_calibration": {
       "type": "boolean",
-      "description": "Is battle in calibration set"
+      "description": "Is battle in calibration set. True - is, False - isn't"
     },
     "rating_end": {
       "type": "integer",
@@ -153,27 +68,24 @@
       "description": "Battle user efficiency. Used for raiting calculation but its NOT raiting",
       "minimum": 0,
       "maximum": 2000
+    },
+    "respawn_stats": {
+      "type": "array",
+      "maxItems": 3,
+      "minItems": 1,
+      "description": "Pllayer's respawn statistics",
+      "items": {
+        "$ref": "./player_result_respawn.v1.json"
+      }
     }
   },
   "required": [
     "spa_id",
-    "vehicle_id",
-    "vehicle_name",
     "time_presence",
-    "time_life",
-    "killer_id",
-    "death_reason_id",
-    "death_reason_name",
-    "battle_result",
-    "economy_result",
-    "crew_mastery",
-    "veh_gun_id",
-    "veh_turret_id",
-    "veh_chassis_id",
-    "veh_engine_id",
     "mm_type_id",
     "num_global",
     "num_mode",
-    "battle_efficiency"
+    "battle_efficiency",
+    "respawn_stats"
   ]
 }

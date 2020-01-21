@@ -1,0 +1,108 @@
+{
+  "title": "player_result_respawn",
+  "type": "object",
+  "description": "",
+  "properties": {
+    "num_respawn": {
+      "type": "integer",
+      "description": "Row number of user's respaun in the battle. (if 0 - mode without respaun)",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "item_used": {
+      "type": "array",
+      "description": "Equiment on vehicle and it's spending",
+      "items": {
+        "$ref": "./player_equipment.v1.json"
+      }
+    },
+    "veh_engine_id": {
+      "type": "integer",
+      "description": "Engine cd by user vehicle"
+    },
+    "veh_chassis_id": {
+      "type": "integer",
+      "description": "Chassis cd by user vehicle"
+    },
+    "veh_turret_id": {
+      "type": "integer",
+      "description": "Turret cd by user vehicle"
+    },
+    "veh_gun_id": {
+      "type": "integer",
+      "description": "Gun cd by user vehicle"
+    },
+    "crew_mastery": {
+      "type": "integer",
+      "description": "Level of avatar mastery on this vehicle",
+      "minimum": 50,
+      "maximum": 100
+    },
+    "economy_result": {
+      "type": "array",
+      "description": "User's income and expenses in battle",
+      "items": {
+        "$ref": "./player_economy_result.v1.json"
+      }
+    },
+    "battle_result": {
+      "type": "array",
+      "description": "User's battle stats (damage, shots, etc)",
+      "items": {
+        "$ref": "./player_battle_efficiency.v1.json"
+      }
+    },
+    "death_reason_name": {
+      "type": "string",
+      "description": "User's vehicle death reason (if -1 user alive)"
+    },
+    "death_reason_id": {
+      "type": "integer",
+      "description": "Death_Reason id by user vehicle (if -1 user alive)",
+      "enum": [
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "killer_id": {
+      "type": "integer",
+      "description": "Spa_id of the killer vehicle. Self-kill is also possible"
+    },
+    "time_life": {
+      "type": "integer",
+      "description": "User life time (until kill) in arena (in seconds)",
+      "minimum": 0,
+      "maximum": 560
+    },
+    "vehicle_name": {
+      "type": "string",
+      "description": "Vehicle name"
+    },
+    "vehicle_id": {
+      "type": "integer",
+      "description": "Vehicle type compact descriptor"
+    }
+  },
+  "required": [
+    "num_respawn",
+    "veh_engine_id",
+    "veh_chassis_id",
+    "veh_turret_id",
+    "veh_gun_id",
+    "crew_mastery",
+    "economy_result",
+    "battle_result",
+    "death_reason_name",
+    "death_reason_id",
+    "killer_id",
+    "time_life",
+    "vehicle_name",
+    "vehicle_id"
+  ]
+}

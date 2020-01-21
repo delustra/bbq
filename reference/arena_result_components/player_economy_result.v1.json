@@ -7,174 +7,245 @@
   "description": "",
   "properties": {
     "cl_credits": {
+      "type": "integer",
       "description": "Credits income by user vehicle without modificators below",
-      "type": "integer"
+      "minimum": 0,
+      "maximum": 400000
     },
     "credits_enriched": {
       "type": "integer",
-      "description": "Credits income for vehicle enriched"
+      "description": "Credits income for vehicle enriched",
+      "minimum": 0,
+      "maximum": 400000
     },
     "credits_efforts": {
+      "type": "integer",
       "description": "Credits income for villiant effort",
-      "type": "integer"
+      "minimum": 0,
+      "maximum": 400000
     },
     "credits_multiplier": {
+      "type": "integer",
       "description": "Credits income for vehicle multiplier",
-      "type": "integer"
+      "minimum": 0,
+      "maximum": 400000
     },
     "credits_premium": {
+      "type": "integer",
       "description": "Credits income for activated prem",
-      "type": "integer"
+      "minimum": 0,
+      "maximum": 400000
     },
     "credits_booster": {
+      "type": "integer",
       "description": "Credits income for activated booster",
-      "type": "integer"
+      "minimum": 0,
+      "maximum": 400000
     },
     "credits_events": {
       "type": "integer",
-      "description": "Credits income from events"
+      "description": "Credits income from events",
+      "minimum": 0,
+      "maximum": 400000
     },
     "credits_ads": {
       "type": "integer",
-      "description": "Credits income for watching add after battle"
+      "description": "Credits income for watching add after battle",
+      "minimum": 0,
+      "maximum": 400000
     },
     "credits_rating": {
       "type": "integer",
-      "description": "Credits income for raiting battle"
+      "description": "Credits income for raiting battle",
+      "minimum": 0,
+      "maximum": 400000
     },
     "credits_repair_needed": {
       "type": "integer",
-      "description": "Full price credits repair costs"
+      "description": "Full price credits repair costs",
+      "minimum": 0,
+      "maximum": 400000
     },
     "credits_auto_repair": {
       "type": "integer",
-      "description": "Fact credits spent for repair with discount automaticly"
+      "description": "Fact credits spent for repair with discount automaticly",
+      "minimum": 0,
+      "maximum": 400000
     },
     "credits_auto_ammo": {
       "type": "integer",
-      "description": "Credits spent for ammunition automaticly"
+      "description": "Credits spent for ammunition automaticly",
+      "minimum": 0,
+      "maximum": 400000
     },
     "credits_auto_equip": {
       "type": "integer",
-      "description": "Credits spent for equipment(consumables) automaticly"
+      "description": "Credits spent for equipment(consumables) automaticly",
+      "minimum": 0,
+      "maximum": 400000
     },
     "credits_auto_prov": {
       "type": "integer",
-      "description": "Credits spent for provision automaticly"
+      "description": "Credits spent for provision automaticly",
+      "minimum": 0,
+      "maximum": 400000
     },
     "credits_auto_camo": {
       "type": "integer",
-      "description": "Credits spent for camo autoamticly"
+      "description": "Credits spent for camo autoamticly",
+      "minimum": 0,
+      "maximum": 400000
     },
     "end_credits": {
       "type": "integer",
-      "description": "Final credits count user get after battle with all modificators"
+      "description": "Final credits count user get after battle with all modificators",
+      "minimum": 0,
+      "maximum": 400000
     },
     "cl_exp": {
       "type": "integer",
-      "description": "Exp income by user vehicle without modificators below"
+      "description": "Exp income by user vehicle without modificators below",
+      "minimum": 0,
+      "maximum": 10000
     },
     "exp_multiplier": {
       "type": "integer",
-      "description": "Exp additional income by multiplier"
+      "description": "Exp additional income by multiplier",
+      "minimum": 0,
+      "maximum": 10000
     },
     "exp_efforts": {
       "type": "integer",
-      "description": "Exp income for villiant effort"
+      "description": "Exp income for villiant effort",
+      "minimum": 0,
+      "maximum": 10000
     },
     "exp_premium": {
       "type": "integer",
-      "description": "Exp income for activated prem"
+      "description": "Exp income for activated prem",
+      "minimum": 0,
+      "maximum": 10000
     },
     "exp_booster": {
       "type": "integer",
-      "description": "Exp income for activated booster"
+      "description": "Exp income for activated booster",
+      "minimum": 0,
+      "maximum": 10000
     },
     "exp_event": {
       "type": "integer",
-      "description": "Exp income from events"
+      "description": "Exp income from events",
+      "minimum": 0,
+      "maximum": 10000
     },
     "exp_ads": {
       "type": "integer",
-      "description": "Exp income for watching add after battle"
+      "description": "Exp income for watching add after battle",
+      "minimum": 0,
+      "maximum": 10000
     },
     "exp_rating": {
       "type": "integer",
-      "description": "Exp income from raiting battles"
+      "description": "Exp income from raiting battles",
+      "minimum": 0,
+      "maximum": 10000
     },
     "end_exp": {
       "type": "integer",
-      "description": "Final exp count user get after battle with all modificators"
+      "description": "Final exp count user get after battle with all modificators",
+      "minimum": 0,
+      "maximum": 10000
     },
     "cl_free_exp": {
       "type": "integer",
-      "description": "Free exp income by user vehicle without modificators below"
+      "description": "Free exp income by user vehicle without modificators below",
+      "minimum": 0,
+      "maximum": 1000
     },
     "free_exp_prem": {
       "type": "integer",
-      "description": "Free exp income for activated prem"
+      "description": "Free exp income for activated prem",
+      "minimum": 0,
+      "maximum": 1000
     },
     "free_exp_booster": {
       "type": "integer",
-      "description": "Free exp income for actived booster"
+      "description": "Free exp income for actived booster",
+      "minimum": 0,
+      "maximum": 1000
     },
     "free_exp_event": {
       "type": "integer",
-      "description": "Free exp income from events"
+      "description": "Free exp income from events",
+      "minimum": 0,
+      "maximum": 1000
     },
     "free_exp_multiplier": {
       "type": "integer",
-      "description": "Free exp additional income by multiplier"
+      "description": "Free exp additional income by multiplier",
+      "minimum": 0,
+      "maximum": 1000
     },
     "end_free_exp": {
       "type": "integer",
-      "description": "Final free exp count user get after battle with all modificators"
+      "description": "Final free exp count user get after battle with all modificators",
+      "minimum": 0,
+      "maximum": 1000
     },
     "cl_crew_exp": {
       "type": "integer",
-      "description": "Crew exp income by user vehicle without modificators below"
+      "description": "Crew exp income by user vehicle without modificators below",
+      "minimum": 0,
+      "maximum": 100000
     },
     "crew_exp_prem": {
       "type": "integer",
-      "description": "Crew exp income for activated prem"
+      "description": "Crew exp income for activated prem",
+      "minimum": 0,
+      "maximum": 100000
     },
     "crew_exp_booster": {
       "type": "integer",
-      "description": "Crew exp income for activated booster"
+      "description": "Crew exp income for activated booster",
+      "minimum": 0,
+      "maximum": 100000
     },
     "crew_exp_event": {
       "type": "integer",
-      "description": "Crew exp income from events"
+      "description": "Crew exp income from events",
+      "minimum": 0,
+      "maximum": 100000
     },
     "crew_exp_multiplier": {
       "type": "integer",
-      "description": "Crew exp additional income by multiplier"
+      "description": "Crew exp additional income by multiplier",
+      "minimum": 0,
+      "maximum": 100000
     },
     "end_crew_exp": {
       "type": "integer",
-      "description": "Final crew exp count user get after battle with all modificators"
+      "description": "Final crew exp count user get after battle with all modificators",
+      "minimum": 0,
+      "maximum": 100000
     },
     "factor_exp": {
       "type": "integer",
       "description": "Exp multiplier from daily, birthday bonus, certificates",
       "minimum": 0,
-      "maximum": 50
+      "maximum": 100
     },
     "factor_credits": {
       "type": "integer",
       "description": "Credits multiplier from daily, birthday bonus, certificates",
       "minimum": 0,
-      "maximum": 50
+      "maximum": 100
     },
     "factor_aogas": {
-      "type": [
-        "boolean",
-        "integer"
-      ],
+      "type": "integer",
       "description": "Aogas factor multiplied to credits, exp, crew_exp, free_exp",
       "enum": [
         0,
-        10
+        1
       ]
     }
   },
