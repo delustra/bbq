@@ -1,0 +1,20 @@
+{
+  "title": "player_vehicle_consumable",
+  "type": "object",
+  "properties": {
+    "consumable_uses": {
+      "type": "integer",
+      "description": "Count times consumable was spent during battle",
+      "minimum": 0,
+      "maximum": 10
+    },
+    "consumable_name": {
+      "type": "string",
+      "description": "Consumable name"
+    },
+    "consumable_id": {
+      "description": "Consumable copmact descriptor",
+      "type": "integer"
+    }
+  }
+}

@@ -7,6 +7,10 @@
       "type": "integer",
       "description": "Account identifier"
     },
+    "avatar_id": {
+      "type": "integer",
+      "description": "User's avatar identificator"
+    },
     "is_observer": {
       "type": "boolean",
       "description": "Was user an observer in this battle. True - was, False - wasn't"
@@ -18,19 +22,6 @@
     "prebattle_id": {
       "type": "integer",
       "description": "Platoon_id / prebattle identifier"
-    },
-    "time_presence": {
-      "type": "integer",
-      "description": "User presence time on arena (in seconds)",
-      "minimum": 0,
-      "maximum": 800
-    },
-    "achievements": {
-      "type": "array",
-      "description": "User's achievements and ribbons in battle",
-      "items": {
-        "$ref": "./player_achievements.v1.json"
-      }
     },
     "mm_type_id": {
       "type": "integer",
@@ -53,15 +44,39 @@
       "description": "Number of battle in this battle type for this current spa_id. Only battle in this battle type increase counter",
       "minimum": 0
     },
-    "is_calibration": {
-      "type": "boolean",
-      "description": "Is battle in calibration set. True - is, False - isn't"
-    },
-    "rating_end": {
+    "time_presence": {
       "type": "integer",
+      "description": "User presence time on arena (in seconds)",
       "minimum": 0,
-      "maximum": 7000,
-      "description": "Battle raiting of user at the battle end (not MMR - raiting in interface)"
+      "maximum": 600
+    },
+    "time_life": {
+      "type": "integer",
+      "description": "User life time (until kill) in arena (in seconds)",
+      "minimum": 0,
+      "maximum": 560
+    },
+    "death_reason_id": {
+      "type": "integer",
+      "description": "Death_Reason id by user vehicle (if -1 user alive)",
+      "enum": [
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "death_reason_name": {
+      "type": "string",
+      "description": "User's vehicle death reason name (if -1 user alive)"
+    },
+    "killer_id": {
+      "type": "integer",
+      "description": "Spa_id of the killer vehicle. Self-kill is also possible"
     },
     "battle_efficiency": {
       "type": "integer",
@@ -69,23 +84,51 @@
       "minimum": 0,
       "maximum": 2000
     },
-    "respawn_stats": {
+    "achievements": {
+      "type": "array",
+      "description": "User's achievements and ribbons in battle",
+      "items": {
+        "$ref": "./player_achievements.v1.json"
+      }
+    },
+    "battle_result": {
+      "type": "array",
+      "description": "User's battle stats (damage, shots, etc)",
+      "items": {
+        "$ref": "./player_battle_efficiency.v1.json"
+      }
+    },
+    "economy_result": {
+      "type": "array",
+      "description": "User's income and expenses in battle",
+      "items": {
+        "$ref": "./player_economy_result.v1.json"
+      }
+    },
+    "vehicle": {
+      "type": "array",
+      "description": "User's vehicle and equipment on it",
+      "items": {
+        "$ref": "./player_result_vehicle.v1.json"
+      }
+    },
+    "mode_stats": {
       "type": "array",
       "maxItems": 3,
       "minItems": 1,
       "description": "Pllayer's respawn statistics",
       "items": {
-        "$ref": "./player_result_respawn.v1.json"
+        "$ref": "./player_result_mode_rating.v1.json"
       }
     }
   },
   "required": [
     "spa_id",
-    "time_presence",
     "mm_type_id",
     "num_global",
     "num_mode",
-    "battle_efficiency",
-    "respawn_stats"
+    "time_presence",
+    "vehicle",
+    "avatar_id"
   ]
 }

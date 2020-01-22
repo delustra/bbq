@@ -41,6 +41,11 @@
       "description": "Number of hits received without any damage",
       "minimum": 0
     },
+    "recieved_hits_module_only": {
+      "type": "integer",
+      "description": "Number of hits received with damage only to vehicle modules",
+      "minimum": 0
+    },
     "received_hits_hp": {
       "type": "integer",
       "description": "Number of hits with damage to hp received",
@@ -79,6 +84,11 @@
     "hits_hp": {
       "type": "integer",
       "description": "Number of hits with damage currently to allies, that hill them",
+      "minimum": 0
+    },
+    "hits_teammates": {
+      "type": "integer",
+      "description": "Number of shots that reached teammates vehicle",
       "minimum": 0
     },
     "damaged_vehicle": {
@@ -144,16 +154,6 @@
     "heal_self": {
       "type": "integer",
       "description": "Count hp that user regenerate by himself",
-      "minimum": 0
-    },
-    "hits_teammates": {
-      "type": "integer",
-      "description": "Number of shots that reached teammates vehicle",
-      "minimum": 0
-    },
-    "recieved_hits_module_only": {
-      "type": "integer",
-      "description": "Number of hits received with damage only to vehicle modules",
       "minimum": 0
     }
   },

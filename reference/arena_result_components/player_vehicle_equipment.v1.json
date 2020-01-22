@@ -1,0 +1,14 @@
+{
+  "title": "player_vehicle_equipment",
+  "type": "object",
+  "properties": {
+    "equipment_id": {
+      "description": "Equipment copmact descriptor",
+      "type": "integer"
+    },
+    "equipment_name": {
+      "type": "string",
+      "description": "Equipment name"
+    }
+  }
+}

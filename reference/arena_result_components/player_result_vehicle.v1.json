@@ -1,0 +1,86 @@
+{
+  "title": "player_result_vehicle",
+  "type": "object",
+  "properties": {
+    "engine_id": {
+      "type": "integer",
+      "description": "Engine cd by user vehicle"
+    },
+    "chassis_id": {
+      "type": "integer",
+      "description": "Chassis cd by user vehicle"
+    },
+    "turret_id": {
+      "type": "integer",
+      "description": "Turret cd by user vehicle"
+    },
+    "gun_id": {
+      "type": "integer",
+      "description": "Gun cd by user vehicle"
+    },
+    "crew_mastery": {
+      "type": "integer",
+      "description": "Level of avatar mastery on this vehicle",
+      "minimum": 50,
+      "maximum": 100
+    },
+    "crew_skill": {
+      "type": "array",
+      "description": "Equiment on vehicle and it's spending",
+      "items": {
+        "$ref": "./player_vehicle_crew.v1.json"
+      }
+    },
+    "vehicle_id": {
+      "type": "integer",
+      "description": "Vehicle type compact descriptor"
+    },
+    "vehicle_name": {
+      "type": "string",
+      "description": "Vehicle name"
+    },
+    "is_elite": {
+      "type": "boolean",
+      "description": "If true - all modules and next vehicles are reserched for user's current vehicle"
+    },
+    "is_top": {
+      "type": "boolean",
+      "description": "If true - all modules except next vehicles are reserched for user's current vehicle"
+    },
+    "camo": {
+      "type": "array",
+      "description": "Camouflage and attachment on user's vehicle",
+      "items": {
+        "$ref": "./player_vehicle_camo.v1.json"
+      }
+    },
+    "consumables": {
+      "type": "array",
+      "description": "Consumables on user's vehicle and it's using",
+      "items": {
+        "$ref": "./player_vehicle_consumable.v1.json"
+      }
+    },
+    "provisions": {
+      "type": "array",
+      "description": "Provisions on user's vehicle",
+      "items": {
+        "$ref": "./player_vehicle_provision.v1.json"
+      }
+    },
+    "ammunition": {
+      "type": "array",
+      "description": "Ammunition on user's vehicle and it's using",
+      "items": {
+        "$ref": "./player_vehicle_ammunition.v1.json"
+      }
+    },
+    "equipment": {
+      "type": "array",
+      "description": "Equipment on user's vehicle",
+      "items": {
+        "$ref": "./player_vehicle_equipment.v1.json"
+      }
+    }
+  }
+}

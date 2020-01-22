@@ -1,0 +1,14 @@
+{
+  "title": "player_vehicle_camo",
+  "type": "object",
+  "properties": {
+    "camo_id": {
+      "description": "Camouflage or attachment copmact descriptor",
+      "type": "integer"
+    },
+    "camo_name": {
+      "type": "string",
+      "description": "Camouflage or attachment name"
+    }
+  }
+}

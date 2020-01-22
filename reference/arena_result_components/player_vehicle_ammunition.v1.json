@@ -1,0 +1,26 @@
+{
+  "title": "player_vehicle_ammunition",
+  "type": "object",
+  "properties": {
+    "ammo_uses": {
+      "type": "integer",
+      "description": "Ammunition spents count during battle",
+      "minimum": 0,
+      "maximum": 2000
+    },
+    "ammo_onboard": {
+      "type": "integer",
+      "description": "Ammunition count on battle start on vehicle",
+      "minimum": 0,
+      "maximum": 2000
+    },
+    "ammo_name": {
+      "type": "string",
+      "description": "Ammunition name"
+    },
+    "ammo_id": {
+      "description": "Ammunition copmact descriptor",
+      "type": "integer"
+    }
+  }
+}

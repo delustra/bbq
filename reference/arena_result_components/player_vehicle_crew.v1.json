@@ -1,0 +1,26 @@
+{
+  "title": "player_vehicle_crew",
+  "type": "object",
+  "properties": {
+    "crew_skill_uses": {
+      "type": "integer",
+      "description": "Count times skill was used in the battle.",
+      "minimum": 0,
+      "maximum": 30
+    },
+    "crew_skill_level": {
+      "type": "integer",
+      "description": "Level of skill user have on battle start",
+      "minimum": 0,
+      "maximum": 7
+    },
+    "crew_skill_name": {
+      "type": "string",
+      "description": "Skill name"
+    },
+    "crew_skill_id": {
+      "description": "Skill copmact descriptor",
+      "type": "integer"
+    }
+  }
+}

@@ -9,7 +9,7 @@
       "minimum": 0,
       "maximum": 3
     },
-    "item_used": {
+    "skill_used": {
       "type": "array",
       "description": "Equiment on vehicle and it's spending",
       "items": {

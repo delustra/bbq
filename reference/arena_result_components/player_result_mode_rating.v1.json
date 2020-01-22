@@ -1,0 +1,20 @@
+{
+  "title": "player_result_mode_rating",
+  "type": "object",
+  "properties": {
+    "num_calibration": {
+      "type": "integer",
+      "description": "Row number of calibration battle for user. When calibration is over - 0."
+    },
+    "rating_after_battle": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 7000,
+      "description": "Battle raiting of user after the battle end (not MMR - raiting in interface)"
+    },
+    "rating_changes": {
+      "type": "integer",
+      "description": "Battle raiting changes for user after the battle (not MMR - raiting in interface)"
+    }
+  }
+}

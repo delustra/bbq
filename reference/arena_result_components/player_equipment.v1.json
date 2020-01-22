@@ -14,7 +14,7 @@
     },
     "item_type_name": {
       "type": "string",
-      "description": "Equipment type name"
+      "description": "Equipment type name (provision, consumable, avatar, crew_skill, DO, etc.)"
     },
     "item_id": {
       "description": "Equipment copmact descriptor",
@@ -32,7 +32,7 @@
     },
     "item_spent": {
       "type": "integer",
-      "description": "Count equipment spents during battle. For provisions - times used during battle.",
+      "description": "Count equipment spents during battle. For provisions, skills - times used during battle.",
       "minimum": -2000,
       "maximum": 0
     }
