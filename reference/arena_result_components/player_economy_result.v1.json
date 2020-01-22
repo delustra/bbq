@@ -18,6 +18,10 @@
       "maximum": 400000,
       "minimum": 0
     },
+    "is_enriched": {
+      "type": "boolean",
+      "description": "Was the vehicle enriched. True - was, False - wasn't"
+    },
     "credits_efforts_factor": {
       "description": "Credits factor used for villiant effort",
       "type": "integer",
@@ -228,6 +232,10 @@
       "maximum": 100000,
       "minimum": 0
     },
+    "gold_auto_ammo": {
+      "type": "integer",
+      "description": "Gold sum spent for ammunition automaticly"
+    },
     "factor_aogas": {
       "type": "integer",
       "description": "Aogas factor multiplied to credits, exp, crew_exp, free_exp",
@@ -235,20 +243,6 @@
         0,
         1
       ]
-    },
-    "end_credits_income": {
-      "type": "integer",
-      "minimum": 0,
-      "maximum": 400000,
-      "description": "Final credits income sum without any spends"
-    },
-    "is_enriched": {
-      "type": "boolean",
-      "description": "Was the vehicle enriched. True - was, False - wasn't"
-    },
-    "gold_auto_ammo": {
-      "type": "integer",
-      "description": "Gold sum spent for ammunition automaticly"
     }
   },
   "required": [
@@ -267,7 +261,6 @@
     "cl_crew_exp",
     "end_crew_exp",
     "factor_aogas",
-    "end_credits_income",
     "is_enriched",
     "gold_auto_ammo"
   ]
