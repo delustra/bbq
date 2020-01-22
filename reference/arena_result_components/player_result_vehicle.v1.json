@@ -2,6 +2,14 @@
   "title": "player_result_vehicle",
   "type": "object",
   "properties": {
+    "vehicle_id": {
+      "type": "integer",
+      "description": "Vehicle type compact descriptor"
+    },
+    "vehicle_name": {
+      "type": "string",
+      "description": "Vehicle name"
+    },
     "engine_id": {
       "type": "integer",
       "description": "Engine cd by user vehicle"
@@ -24,21 +32,6 @@
       "minimum": 50,
       "maximum": 100
     },
-    "crew_skill": {
-      "type": "array",
-      "description": "Equiment on vehicle and it's spending",
-      "items": {
-        "$ref": "./player_vehicle_crew.v1.json"
-      }
-    },
-    "vehicle_id": {
-      "type": "integer",
-      "description": "Vehicle type compact descriptor"
-    },
-    "vehicle_name": {
-      "type": "string",
-      "description": "Vehicle name"
-    },
     "is_elite": {
       "type": "boolean",
       "description": "If true - all modules and next vehicles are reserched for user's current vehicle"
@@ -46,6 +39,13 @@
     "is_top": {
       "type": "boolean",
       "description": "If true - all modules except next vehicles are reserched for user's current vehicle"
+    },
+    "crew_skill": {
+      "type": "array",
+      "description": "Equiment on vehicle and it's spending",
+      "items": {
+        "$ref": "./player_vehicle_crew.v1.json"
+      }
     },
     "camo": {
       "type": "array",

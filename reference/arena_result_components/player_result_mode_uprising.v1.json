@@ -16,28 +16,6 @@
         "$ref": "./player_equipment.v1.json"
       }
     },
-    "veh_engine_id": {
-      "type": "integer",
-      "description": "Engine cd by user vehicle"
-    },
-    "veh_chassis_id": {
-      "type": "integer",
-      "description": "Chassis cd by user vehicle"
-    },
-    "veh_turret_id": {
-      "type": "integer",
-      "description": "Turret cd by user vehicle"
-    },
-    "veh_gun_id": {
-      "type": "integer",
-      "description": "Gun cd by user vehicle"
-    },
-    "crew_mastery": {
-      "type": "integer",
-      "description": "Level of avatar mastery on this vehicle",
-      "minimum": 50,
-      "maximum": 100
-    },
     "economy_result": {
       "type": "array",
       "description": "User's income and expenses in battle",
@@ -79,30 +57,15 @@
       "description": "User life time (until kill) in arena (in seconds)",
       "minimum": 0,
       "maximum": 560
-    },
-    "vehicle_name": {
-      "type": "string",
-      "description": "Vehicle name"
-    },
-    "vehicle_id": {
-      "type": "integer",
-      "description": "Vehicle type compact descriptor"
     }
   },
   "required": [
     "num_respawn",
-    "veh_engine_id",
-    "veh_chassis_id",
-    "veh_turret_id",
-    "veh_gun_id",
-    "crew_mastery",
     "economy_result",
     "battle_result",
     "death_reason_name",
     "death_reason_id",
     "killer_id",
-    "time_life",
-    "vehicle_name",
-    "vehicle_id"
+    "time_life"
   ]
 }
