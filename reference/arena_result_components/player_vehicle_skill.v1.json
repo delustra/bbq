@@ -1,0 +1,20 @@
+{
+  "title": "player_vehicle_skill_used",
+  "type": "object",
+  "properties": {
+    "skill_id": {
+      "description": "Skill copmact descriptor",
+      "type": "integer"
+    },
+    "skill_name": {
+      "type": "string",
+      "description": "Skill name"
+    },
+    "skill_uses": {
+      "type": "integer",
+      "description": "Count times skill was used during battle.",
+      "minimum": -2000,
+      "maximum": 0
+    }
+  }
+}
