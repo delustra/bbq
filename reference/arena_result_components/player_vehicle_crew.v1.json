@@ -22,5 +22,10 @@
       "description": "Skill copmact descriptor",
       "type": "integer"
     }
-  }
+  },
+  "required": [
+    "crew_skill_level",
+    "crew_skill_name",
+    "crew_skill_id"
+  ]
 }

@@ -22,5 +22,11 @@
       "description": "Ammunition copmact descriptor",
       "type": "integer"
     }
-  }
+  },
+  "required": [
+    "ammo_uses",
+    "ammo_onboard",
+    "ammo_name",
+    "ammo_id"
+  ]
 }

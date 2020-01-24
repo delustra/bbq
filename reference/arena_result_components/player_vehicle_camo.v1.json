@@ -10,5 +10,9 @@
       "type": "string",
       "description": "Camouflage or attachment name"
     }
-  }
+  },
+  "required": [
+    "camo_id",
+    "camo_name"
+  ]
 }

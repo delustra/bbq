@@ -10,5 +10,9 @@
       "type": "string",
       "description": "Equipment name"
     }
-  }
+  },
+  "required": [
+    "equipment_id",
+    "equipment_name"
+  ]
 }

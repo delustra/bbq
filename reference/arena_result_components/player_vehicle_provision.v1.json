@@ -10,5 +10,9 @@
       "description": "Provision copmact descriptor",
       "type": "integer"
     }
-  }
+  },
+  "required": [
+    "provision_name",
+    "provision_id"
+  ]
 }

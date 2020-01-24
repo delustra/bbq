@@ -16,5 +16,10 @@
       "minimum": -2000,
       "maximum": 0
     }
-  }
+  },
+  "required": [
+    "skill_id",
+    "skill_name",
+    "skill_uses"
+  ]
 }

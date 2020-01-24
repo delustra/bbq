@@ -16,5 +16,10 @@
       "description": "Consumable copmact descriptor",
       "type": "integer"
     }
-  }
+  },
+  "required": [
+    "consumable_uses",
+    "consumable_name",
+    "consumable_id"
+  ]
 }

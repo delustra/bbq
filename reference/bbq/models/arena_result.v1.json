@@ -1,7 +1,7 @@
 {
   "title": "arena_result",
   "type": "object",
-  "description": "Important notes:\n1. event sent when the battle is over\n2. description doesn't consist technical parameters (like metadata, inner_local_ip, periphery_id)",
+  "description": "Important notes:\n1. event sents when the battle is over\n2. description doesn't consist technical parameters (like metadata, inner_local_ip, periphery_id)",
   "x-examples": {},
   "properties": {
     "start_ts": {
