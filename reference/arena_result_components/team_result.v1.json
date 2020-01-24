@@ -17,7 +17,8 @@
     "members": {
       "type": "array",
       "description": "Team members description",
-      "maxItems": 21,
+      "uniqueItems": true,
+      "maxItems": 9,
       "minItems": 1,
       "items": {
         "$ref": "./player_result.v1.json"

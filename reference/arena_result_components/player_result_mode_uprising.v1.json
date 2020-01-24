@@ -5,15 +5,15 @@
   "properties": {
     "num_respawn": {
       "type": "integer",
-      "description": "Row number of user's respaun in the battle. (if 0 - mode without respaun)",
+      "description": "Row number of user's respawn in the battle. (if 0 - start respawn on the battle begin)",
       "minimum": 0,
-      "maximum": 3
+      "maximum": 2
     },
     "skill_used": {
       "type": "array",
-      "description": "Equiment on vehicle and it's spending",
+      "description": "Skills on vehicle and it's spending",
       "items": {
-        "$ref": "./player_equipment.v1.json"
+        "$ref": "./player_vehicle_skill.v1.json"
       }
     },
     "economy_result": {

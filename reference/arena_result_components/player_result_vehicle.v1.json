@@ -28,7 +28,7 @@
     },
     "crew_mastery": {
       "type": "integer",
-      "description": "Level of avatar mastery on this vehicle",
+      "description": "Level of crew mastery on this vehicle",
       "minimum": 50,
       "maximum": 100
     },
@@ -42,7 +42,8 @@
     },
     "crew_skill": {
       "type": "array",
-      "description": "Equiment on vehicle and it's spending",
+      "description": "Crew skill on user account and its uses in battle",
+      "uniqueItems": true,
       "items": {
         "$ref": "./player_vehicle_crew.v1.json"
       }
@@ -50,6 +51,7 @@
     "camo": {
       "type": "array",
       "description": "Camouflage and attachment on user's vehicle",
+      "uniqueItems": true,
       "items": {
         "$ref": "./player_vehicle_camo.v1.json"
       }
@@ -57,6 +59,7 @@
     "consumables": {
       "type": "array",
       "description": "Consumables on user's vehicle and it's using",
+      "uniqueItems": true,
       "items": {
         "$ref": "./player_vehicle_consumable.v1.json"
       }
@@ -64,6 +67,7 @@
     "provisions": {
       "type": "array",
       "description": "Provisions on user's vehicle",
+      "uniqueItems": true,
       "items": {
         "$ref": "./player_vehicle_provision.v1.json"
       }
@@ -71,6 +75,7 @@
     "ammunition": {
       "type": "array",
       "description": "Ammunition on user's vehicle and it's using",
+      "uniqueItems": true,
       "items": {
         "$ref": "./player_vehicle_ammunition.v1.json"
       }
@@ -78,9 +83,22 @@
     "equipment": {
       "type": "array",
       "description": "Equipment on user's vehicle",
+      "uniqueItems": true,
       "items": {
         "$ref": "./player_vehicle_equipment.v1.json"
       }
     }
-  }
+  },
+  "required": [
+    "vehicle_id",
+    "vehicle_name",
+    "engine_id",
+    "chassis_id",
+    "turret_id",
+    "gun_id",
+    "crew_mastery",
+    "is_elite",
+    "is_top",
+    "ammunition"
+  ]
 }

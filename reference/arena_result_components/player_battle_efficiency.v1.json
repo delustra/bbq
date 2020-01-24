@@ -83,7 +83,7 @@
     },
     "hits_hp": {
       "type": "integer",
-      "description": "Number of hits with damage currently to allies, that hill them",
+      "description": "Number of hits with damage to enemies' hp",
       "minimum": 0
     },
     "hits_teammates": {
@@ -155,6 +155,12 @@
       "type": "integer",
       "description": "Count hp that user regenerate by himself",
       "minimum": 0
+    },
+    "battle_efficiency": {
+      "type": "integer",
+      "description": "Battle user efficiency. Used for raiting calculation but its NOT raiting",
+      "minimum": 0,
+      "maximum": 2000
     }
   },
   "required": [
@@ -165,6 +171,7 @@
     "remained_hp",
     "recieved_hits",
     "received_hits_without_dmg",
+    "recieved_hits_module_only",
     "received_hits_hp",
     "shots",
     "shots_auto_aim",
@@ -180,6 +187,6 @@
     "captured_base",
     "capture_points",
     "capture_points_dropped",
-    "recieved_hits_module_only"
+    "battle_efficiency"
   ]
 }

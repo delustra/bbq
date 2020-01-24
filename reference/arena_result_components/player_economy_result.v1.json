@@ -15,30 +15,30 @@
     "credits_vehicle_factor": {
       "type": "integer",
       "description": "Credits factor of vehicle. Can be changed by vehicle enrichment.",
-      "maximum": 400000,
-      "minimum": 0
+      "minimum": 0,
+      "maximum": 10
     },
     "is_enriched": {
       "type": "boolean",
       "description": "Was the vehicle enriched. True - was, False - wasn't"
     },
     "credits_efforts_factor": {
-      "description": "Credits factor used for villiant effort",
       "type": "integer",
-      "maximum": 400000,
-      "minimum": 0
+      "description": "Credits factor used for villiant effort",
+      "minimum": 0,
+      "maximum": 100
     },
     "credits_multiplier_factor": {
-      "description": "Credits multiplier factor on vehicle (birthday, daily X, etc)",
       "type": "integer",
-      "maximum": 400000,
-      "minimum": 0
+      "description": "Credits multiplier factor on vehicle (birthday, daily X, etc)",
+      "minimum": 0,
+      "maximum": 100
     },
     "credits_premium_factor": {
-      "description": "Credits factor used if prem activated",
       "type": "integer",
-      "maximum": 400000,
-      "minimum": 0
+      "description": "Credits factor used if prem activated",
+      "minimum": 0,
+      "maximum": 100
     },
     "credits_booster_sum": {
       "description": "Credits income sum for activated booster",
@@ -115,26 +115,26 @@
     "exp_multiplier_factor": {
       "type": "integer",
       "description": "Exp multiplier factor on vehicle (birthday, daily X, etc.)",
-      "maximum": 10000,
-      "minimum": 0
+      "minimum": 0,
+      "maximum": 100
     },
     "exp_efforts_factor": {
       "type": "integer",
       "description": "Exp villiant effort factor",
-      "maximum": 10000,
-      "minimum": 0
+      "minimum": 0,
+      "maximum": 100
     },
     "exp_premium_factor": {
       "type": "integer",
       "description": "Exp factor used if prem activated",
-      "maximum": 10000,
-      "minimum": 0
+      "minimum": 0,
+      "maximum": 100
     },
     "exp_booster_factor": {
       "type": "integer",
       "description": "Exp income factor for activated booster",
-      "maximum": 10000,
-      "minimum": 0
+      "minimum": 0,
+      "maximum": 500
     },
     "exp_event_sum": {
       "type": "integer",
@@ -205,14 +205,14 @@
     "crew_exp_prem_factor": {
       "type": "integer",
       "description": "Crew exp income factor for activated prem",
-      "maximum": 100000,
-      "minimum": 0
+      "minimum": 0,
+      "maximum": 100
     },
     "crew_exp_booster_factor": {
       "type": "integer",
       "description": "Crew exp income factor for activated booster",
-      "maximum": 100000,
-      "minimum": 0
+      "minimum": 0,
+      "maximum": 500
     },
     "crew_exp_event_sum": {
       "type": "integer",
@@ -223,8 +223,8 @@
     "crew_exp_multiplier_factor": {
       "type": "integer",
       "description": "Crew exp multiplier factor on vehicle (dailyX, birthday, etc.)",
-      "maximum": 100000,
-      "minimum": 0
+      "minimum": 0,
+      "maximum": 100
     },
     "end_crew_exp": {
       "type": "integer",
@@ -234,19 +234,30 @@
     },
     "gold_auto_ammo": {
       "type": "integer",
-      "description": "Gold sum spent for ammunition automaticly"
+      "description": "Gold sum spent for ammunition automaticly",
+      "minimum": 0,
+      "maximum": 500
     },
     "factor_aogas": {
       "type": "integer",
       "description": "Aogas factor multiplied to credits, exp, crew_exp, free_exp",
       "enum": [
         0,
-        1
+        10
       ]
     }
   },
   "required": [
     "cl_credits",
+    "credits_vehicle_factor",
+    "is_enriched",
+    "credits_efforts_factor",
+    "credits_multiplier_factor",
+    "credits_premium_factor",
+    "credits_booster_sum",
+    "credits_events_sum",
+    "credits_ads_sum",
+    "credits_rating_sum",
     "credits_repair_needed",
     "credits_auto_repair",
     "credits_auto_ammo",
@@ -255,13 +266,27 @@
     "credits_auto_camo",
     "end_credits",
     "cl_exp",
+    "exp_multiplier_factor",
+    "exp_efforts_factor",
+    "exp_premium_factor",
+    "exp_booster_factor",
+    "exp_event_sum",
+    "exp_ads_sum",
+    "exp_rating_sum",
     "end_exp",
     "cl_free_exp",
+    "free_exp_prem_factor",
+    "free_exp_booster_factor",
+    "free_exp_event_sum",
+    "free_exp_multiplier_factor",
     "end_free_exp",
     "cl_crew_exp",
+    "crew_exp_prem_factor",
+    "crew_exp_booster_factor",
+    "crew_exp_event_sum",
+    "crew_exp_multiplier_factor",
     "end_crew_exp",
-    "factor_aogas",
-    "is_enriched",
-    "gold_auto_ammo"
+    "gold_auto_ammo",
+    "factor_aogas"
   ]
 }

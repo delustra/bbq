@@ -4,10 +4,11 @@
   "properties": {
     "achievement_type_id": {
       "type": "integer",
-      "description": "Achievement type identificator (1 - achievement, 2 - ribbon)",
+      "description": "Achievement type identificator (1 - achievement, 2 - ribbon, 3 - avatar)",
       "enum": [
         1,
-        2
+        2,
+        3
       ]
     },
     "achievement_type_name": {
@@ -30,5 +31,11 @@
       "description": "Achievement or ribbon value",
       "type": "integer"
     }
-  }
+  },
+  "required": [
+    "achievement_type_id",
+    "achievement_type_name",
+    "achievement_id",
+    "achievement_name"
+  ]
 }

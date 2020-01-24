@@ -16,5 +16,10 @@
       "type": "integer",
       "description": "Battle raiting changes for user after the battle (not MMR - raiting in interface)"
     }
-  }
+  },
+  "required": [
+    "num_calibration",
+    "rating_after_battle",
+    "rating_changes"
+  ]
 }

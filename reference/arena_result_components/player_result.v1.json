@@ -36,12 +36,12 @@
     },
     "num_global": {
       "type": "integer",
-      "description": "Number of battle for this current spa_id. All battle types included",
+      "description": "Row number of battle for this current spa_id. All battle types included",
       "minimum": 0
     },
     "num_mode": {
       "type": "integer",
-      "description": "Number of battle in this battle type for this current spa_id. Only battle in this battle type increase counter",
+      "description": "Row number of battle in this battle type for this current spa_id. Only battle in this battle type increase counter",
       "minimum": 0
     },
     "time_presence": {
@@ -78,15 +78,10 @@
       "type": "integer",
       "description": "Spa_id of the killer vehicle. Self-kill is also possible"
     },
-    "battle_efficiency": {
-      "type": "integer",
-      "description": "Battle user efficiency. Used for raiting calculation but its NOT raiting",
-      "minimum": 0,
-      "maximum": 2000
-    },
     "achievements": {
       "type": "array",
-      "description": "User's achievements and ribbons in battle",
+      "description": "User gets achievements, ribbons and avatars in battle",
+      "uniqueItems": true,
       "items": {
         "$ref": "./player_achievements.v1.json"
       }
@@ -94,6 +89,8 @@
     "battle_result": {
       "type": "array",
       "description": "User's battle stats (damage, shots, etc)",
+      "maxItems": 1,
+      "minItems": 1,
       "items": {
         "$ref": "./player_battle_efficiency.v1.json"
       }
@@ -101,6 +98,8 @@
     "economy_result": {
       "type": "array",
       "description": "User's income and expenses in battle",
+      "maxItems": 1,
+      "minItems": 1,
       "items": {
         "$ref": "./player_economy_result.v1.json"
       }
@@ -108,6 +107,8 @@
     "vehicle": {
       "type": "array",
       "description": "User's vehicle and equipment on it",
+      "maxItems": 1,
+      "minItems": 1,
       "items": {
         "$ref": "./player_result_vehicle.v1.json"
       }
@@ -116,7 +117,7 @@
       "type": "array",
       "maxItems": 3,
       "minItems": 1,
-      "description": "Pllayer's respawn statistics",
+      "description": "Mode specific statistics (see mode_uprising, mode_raiting, etc.)",
       "items": {
         "$ref": "./player_result_mode_rating.v1.json"
       }
@@ -124,11 +125,17 @@
   },
   "required": [
     "spa_id",
+    "avatar_id",
     "mm_type_id",
     "num_global",
     "num_mode",
     "time_presence",
-    "vehicle",
-    "avatar_id"
+    "time_life",
+    "death_reason_id",
+    "death_reason_name",
+    "killer_id",
+    "battle_result",
+    "economy_result",
+    "vehicle"
   ]
 }

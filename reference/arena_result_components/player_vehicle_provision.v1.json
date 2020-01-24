@@ -4,10 +4,10 @@
   "properties": {
     "provision_name": {
       "type": "string",
-      "description": "Equipment name"
+      "description": "Provision name"
     },
     "provision_id": {
-      "description": "Equipment copmact descriptor",
+      "description": "Provision copmact descriptor",
       "type": "integer"
     }
   }

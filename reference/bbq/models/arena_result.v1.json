@@ -6,7 +6,7 @@
   "properties": {
     "start_ts": {
       "type": "string",
-      "description": "Battle start date and time"
+      "description": "Battle start date and time (format: \"YYYY-MM-DD HH:MM:SS\")"
     },
     "arena_id": {
       "type": "integer",
@@ -80,13 +80,13 @@
       "type": "string",
       "description": "Win type name"
     },
-    "map_type_id": {
+    "map_id": {
       "type": "integer",
       "description": "Map type identifier",
       "minimum": 1,
       "maximum": 42
     },
-    "map_type_name": {
+    "map_name": {
       "type": "string",
       "description": "Map type name"
     },
@@ -99,7 +99,7 @@
     "teams": {
       "type": "array",
       "description": "Teams and team members description",
-      "uniqueItems": false,
+      "uniqueItems": true,
       "maxItems": 2,
       "minItems": 1,
       "items": {
@@ -117,8 +117,8 @@
     "gameplay_type_name",
     "win_type_id",
     "win_type_name",
-    "map_type_id",
-    "map_type_name",
+    "map_id",
+    "map_name",
     "duration",
     "teams"
   ]
